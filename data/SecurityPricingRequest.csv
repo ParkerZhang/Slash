@@ -1,0 +1,6 @@
+isin|currency|exchange_code|requested_date|status
+XS000000001|EUR|XLON|2024-12-16|pending
+XS000000002|USD|XNAS|2024-12-16|pending
+XS000000003|USD|XHKF|2024-12-16|pending
+XS000000004|EUR|XMAD|2024-12-16|pending
+XS000000005|USD|XPAR|2024-12-16|pending

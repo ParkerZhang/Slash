@@ -1,0 +1,157 @@
+{
+  "took": 128,
+  "timed_out": false,
+  "hits": {
+    "total": {
+      "value": 5,
+      "relation": "eq"
+    },
+    "max_score": 1.0,
+    "hits": [
+      {
+        "_index": "products",
+        "_id": "1",
+        "_score": 1.0,
+        "_source": {
+          "name": "Wireless Headphones Pro",
+          "price": 199.99,
+          "category": "Electronics",
+          "tags": ["audio", "wireless", "bluetooth", "noise-cancelling"],
+          "in_stock": true,
+          "rating": 4.5,
+          "specs": {
+            "battery_life": "30 hours",
+            "connectivity": ["bluetooth 5.0", "aux"],
+            "weight": "250g",
+            "warranty": "2 years"
+          },
+          "reviews": [
+            { "user": "Alice", "score": 5, "comment": "Amazing sound quality!" },
+            { "user": "Bob", "score": 4, "comment": "Great battery, slight discomfort" }
+          ]
+        }
+      },
+      {
+        "_index": "products",
+        "_id": "2",
+        "_score": 0.95,
+        "_source": {
+          "name": "Bluetooth Speaker Ultra",
+          "price": 79.99,
+          "category": "Electronics",
+          "tags": ["audio", "portable", "waterproof"],
+          "in_stock": true,
+          "rating": 4.2,
+          "specs": {
+            "battery_life": "12 hours",
+            "connectivity": ["bluetooth", "usb-c"],
+            "weight": "500g",
+            "warranty": "1 year"
+          },
+          "reviews": [
+            { "user": "Charlie", "score": 5, "comment": "Perfect for outdoor use!" },
+            { "user": "Diana", "score": 4, "comment": "Good sound, loud" }
+          ]
+        }
+      },
+      {
+        "_index": "products",
+        "_id": "3",
+        "_score": 0.88,
+        "_source": {
+          "name": "USB-C Fast Charger",
+          "price": 29.99,
+          "category": "Accessories",
+          "tags": ["cable", "charging", "usb", "fast-charging"],
+          "in_stock": false,
+          "rating": 3.8,
+          "specs": {
+            "output": "65W",
+            "ports": ["USB-C", "USB-A"],
+            "compatibility": {
+              "phones": {
+                "brands": ["Apple", "Samsung", "Google", "OnePlus"],
+                "os": ["iOS 15+", "Android 10+"],
+                "fast_charging": {
+                  "standard": "USB-PD",
+                  "max_wattage": 65,
+                  "certified": true
+                }
+              },
+              "laptops": {
+                "brands": ["Dell", "HP", "Lenovo", "MacBook"],
+                "requirement": "USB-C with Power Delivery",
+                "max_power": 65,
+                "notes": "Some laptops may require 90W+ adapter"
+              },
+              "tablets": {
+                "brands": ["iPad Pro", "Samsung Tab", "Microsoft Surface"],
+                "fast_charging": true
+              }
+            },
+            "warranty": "1 year"
+          },
+          "reviews": [
+            { "user": "Eve", "score": 3, "comment": "Works as described" }
+          ]
+        }
+      },
+      {
+        "_index": "products",
+        "_id": "4",
+        "_score": 0.82,
+        "_source": {
+          "name": "Smart Watch Series X",
+          "price": 349.99,
+          "category": "Wearables",
+          "tags": ["smartwatch", "fitness", "health"],
+          "in_stock": true,
+          "rating": 4.7,
+          "specs": {
+            "battery_life": "7 days",
+            "display": "AMOLED",
+            "sensors": ["heart-rate", "spo2", "gps"],
+            "water_resistance": "5ATM"
+          },
+          "reviews": [
+            { "user": "Frank", "score": 5, "comment": "Best smartwatch I've owned!" },
+            { "user": "Grace", "score": 5, "comment": "Love the health tracking" },
+            { "user": "Henry", "score": 4, "comment": "Great but pricey" }
+          ],
+          "metadata": {
+            "brand": "TechCorp",
+            "model": "SW-X2024",
+            "colors": ["black", "silver", "gold"],
+            "release_date": "2024-01-15"
+          }
+        }
+      },
+      {
+        "_index": "products",
+        "_id": "5",
+        "_score": 0.75,
+        "_source": {
+          "name": "Wireless Gaming Mouse",
+          "price": 89.99,
+          "category": "Gaming",
+          "tags": ["gaming", "wireless", "rgb"],
+          "in_stock": true,
+          "rating": 4.4,
+          "specs": {
+            "dpi": "16000",
+            "buttons": 8,
+            "connection": ["2.4GHz", "bluetooth"],
+            "battery_life": "70 hours"
+          },
+          "reviews": [],
+          "features": {
+            "programmable_buttons": true,
+            "rgb_zones": 3,
+            "weight": "95g",
+            "sensor_type": "optical"
+          }
+        }
+      }
+    ]
+  }
+}

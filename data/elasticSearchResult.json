@@ -1,0 +1,52 @@
+{
+  "took": 45,
+  "timed_out": false,
+  "hits": {
+    "total": {
+      "value": 3,
+      "relation": "eq"
+    },
+    "max_score": 1.0,
+    "hits": [
+      {
+        "_index": "products",
+        "_id": "1",
+        "_score": 1.0,
+        "_source": {
+          "name": "Wireless Headphones",
+          "price": 199.99,
+          "category": "Electronics",
+          "tags": ["audio", "wireless", "bluetooth"],
+          "in_stock": true,
+          "rating": 4.5
+        }
+      },
+      {
+        "_index": "products",
+        "_id": "2",
+        "_score": 0.9,
+        "_source": {
+          "name": "Bluetooth Speaker",
+          "price": 79.99,
+          "category": "Electronics",
+          "tags": ["audio", "portable", "waterproof"],
+          "in_stock": true,
+          "rating": 4.2
+        }
+      },
+      {
+        "_index": "products",
+        "_id": "3",
+        "_score": 0.8,
+        "_source": {
+          "name": "USB-C Cable",
+          "price": 12.99,
+          "category": "Accessories",
+          "tags": ["cable", "charging", "usb"],
+          "in_stock": false,
+          "rating": 3.8
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "tui-slash",
+  "version": "1.0.0",
+  "description": "TUI application for viewing and comparing ElasticSearch JSON and CSV files with slash commands",
+  "main": "src/index.tsx",
+  "bin": {
+    "tui-slash": "./bin/tui-slash.js"
+  },
+  "scripts": {
+    "start": "script -q /dev/null -c \"npx tsx src/index.tsx\"",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "tui",
+    "cli",
+    "ink",
+    "react",
+    "elasticsearch",
+    "csv",
+    "json",
+    "diff",
+    "compare"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "alasql": "^4.17.1",
+    "ink": "^6.8.0",
+    "ink-text-input": "^6.0.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "tsx": "^4.21.0",
+    "vitest": "^4.1.2"
+  }
+}

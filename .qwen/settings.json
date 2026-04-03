@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(npm link)",
+      "Bash(tui-slash)"
+    ]
+  },
+  "$version": 3
+}

@@ -1,0 +1,4 @@
+isin|currency|exchange_code|price|business_date|status
+XS000000001|EUR|XLON|185.50|2024-12-15|active
+XS000000005|USD|XPAR|95.00|2024-12-15|inactive
+XS000000002|USD|XNAS|72.25|2024-12-15|active

@@ -1,0 +1,16 @@
+[
+  {
+    "isin": "XS000000003",
+    "currency": "USD",
+    "exchange_code": "XHKF",
+    "requested_date": "2024-12-16",
+    "status": "pending"
+  },
+  {
+    "isin": "XS000000004",
+    "currency": "EUR",
+    "exchange_code": "XMAD",
+    "requested_date": "2024-12-16",
+    "status": "pending"
+  }
+]

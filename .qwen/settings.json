@@ -10,7 +10,8 @@
       "Bash(echo *)",
       "Bash(npm install)",
       "Bash(find *)",
-      "Bash(cp *)"
+      "Bash(cp *)",
+      "Bash(du *)"
     ]
   },
   "$version": 3

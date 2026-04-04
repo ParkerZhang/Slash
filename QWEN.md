@@ -1,0 +1,2 @@
+## Qwen Added Memories
+- TUI-Slash V2.1 project at /home/src/gemma4/tui-slash implements terminal-first data workspace with AI clustering analysis. Key features: /cluster command with K-means and local embeddings (all-MiniLM-L6-v2), /ai analyze for AI-powered clustering interpretation, /ai train workflow with provider management (ollama, llama-cpp), mental model visualization with sector symbols, banner cycling with haikus, output scrolling. Model files cached in modelFiles/, AI config in .ai-provider.json. 93 tests passing.

@@ -1,6 +1,60 @@
-isin|currency|exchange_code|requested_date|status
-XS000000001|EUR|XLON|2024-12-16|pending
-XS000000002|USD|XNAS|2024-12-16|pending
-XS000000003|USD|XHKF|2024-12-16|pending
-XS000000004|EUR|XMAD|2024-12-16|pending
-XS000000005|USD|XPAR|2024-12-16|pending
+isin|currency|exchange_code|country|name|sector|requested_date|status
+US0378331005|USD|NYSE|US|Apple Inc|Tech|2024-12-16|pending
+US5949181045|USD|NYSE|US|Microsoft Corp|Tech|2024-12-16|pending
+US02079K3059|USD|NYSE|US|Alphabet Inc A|Tech|2024-12-16|pending
+GB00B03MLX29|GBP|XLON|GB|Shell PLC|Energy|2024-12-16|pending
+GB00BH4HKS39|GBP|XLON|GB|Vodafone Group|Telecom|2024-12-16|pending
+JP3633400001|JPY|TSE|JP|Toyota Motor Corp|Automotive|2024-12-16|pending
+JP3435000009|JPY|TSE|JP|Sony Group Corp|Tech|2024-12-16|pending
+JP3778600004|JPY|TSE|JP|Panasonic Holdings|Tech|2024-12-16|pending
+JP3866800000|JPY|TSE|JP|Seven & I Holdings|Retail|2024-12-16|pending
+JP3496400007|JPY|TSE|JP|KDDI Corp|Telecom|2024-12-16|pending
+HK0000004322|HKD|XHK|HK|Tencent Holdings|Tech|2024-12-16|pending
+HK0000069689|HKD|XHK|HK|Alibaba Health Info|Tech|2024-12-16|pending
+HK0000039689|HKD|XHK|HK|China Merchants Bank|Banking|2024-12-16|pending
+HK0000083169|HKD|XHK|HK|Geely Automobile|Automotive|2024-12-16|pending
+HK0000093988|HKD|XHK|HK|Industrial Bank Co|Banking|2024-12-16|pending
+BRPETRACNPR6|BRL|LATAM|BR|Petrobras PN|Energy|2024-12-16|pending
+BRVALEACNOR0|BRL|LATAM|BR|VALE SA|Energy|2024-12-16|pending
+BRITUBACNOR4|BRL|LATAM|BR|Itau Unibanco|Banking|2024-12-16|pending
+MXP370711014|MXN|LATAM|MX|America Movil|Automotive|2024-12-16|pending
+MXP001661018|MXN|LATAM|MX|Walmart de Mexico|Retail|2024-12-16|pending
+CLP7847L1080|CLP|LATAM|CL|Enel Chile|Energy|2024-12-16|pending
+CLP249051066|CLP|LATAM|CL|Banco de Chile|Other|2024-12-16|pending
+ARBCOM460L12|ARS|LATAM|AR|Grupo Financiero Galicia|Banking|2024-12-16|pending
+JP3902900004|JPY|TSE|JP|Mitsubishi UFJ Financial|Banking|2024-12-16|pending
+JP3388200002|JPY|TSE|JP|SoftBank Corp|Banking|2024-12-16|pending
+JP3205800000|JPY|TSE|JP|Kao Corp|Other|2024-12-16|pending
+JP3143600009|JPY|TSE|JP|Asahi Group Holdings|Other|2024-12-16|pending
+JP3571400005|JPY|TSE|JP|Tokyo Electron|Other|2024-12-16|pending
+HK0000103810|HKD|XHK|HK|Lenovo Group|Other|2024-12-16|pending
+HK0000123456|HKD|XHK|HK|China Life Insurance|Other|2024-12-16|pending
+HK0000654321|HKD|XHK|HK|China Construction Bank|Banking|2024-12-16|pending
+HK0000789012|HKD|XHK|HK|Ping An Insurance|Other|2024-12-16|pending
+HK0000234567|HKD|XHK|HK|BOC Hong Kong|Other|2024-12-16|pending
+BRBBDCACNPR8|BRL|LATAM|BR|Bradesco SA|Other|2024-12-16|pending
+BRBBASACNOR3|BRL|LATAM|BR|Banco do Brasil|Other|2024-12-16|pending
+BRWEGEACNOR0|BRL|LATAM|BR|Weg SA|Other|2024-12-16|pending
+BRRENTACNOR4|BRL|LATAM|BR|Localiza Rent a Car|Other|2024-12-16|pending
+MXP320321310|MXN|LATAM|MX|Grupo Bimbo|Other|2024-12-16|pending
+MXP225611567|MXN|LATAM|MX|Cemex SAB|Other|2024-12-16|pending
+MXP4987W100|MXN|LATAM|MX|Grupo Mexico|Other|2024-12-16|pending
+JP3672400003|JPY|TSE|JP|Nintendo Co Ltd|Other|2024-12-16|pending
+JP3164720009|JPY|TSE|JP|ORIX Corp|Other|2024-12-16|pending
+JP3659000008|JPY|TSE|JP|West Japan Railway|Other|2024-12-16|pending
+HK0000333333|HKD|XHK|HK|Xiaomi Corp|Other|2024-12-16|pending
+HK0000444444|HKD|XHK|HK|Meituan|Other|2024-12-16|pending
+HK0000555555|HKD|XHK|HK|JD.com Inc|Other|2024-12-16|pending
+US0231351067|USD|NYSE|US|Amazon.com Inc|Other|2024-12-16|pending
+US30303M1027|USD|NYSE|US|Meta Platforms|Other|2024-12-16|pending
+GB00B10RZP78|GBP|XLON|GB|Unilever PLC|Other|2024-12-16|pending
+GB00B24CGK77|GBP|XLON|GB|Reckitt Benckiser|Other|2024-12-16|pending
+JP3407400005|JPY|TSE|JP|Sumitomo Corp|Other|2024-12-16|pending
+JP3890350006|JPY|TSE|JP|Mitsui & Co|Other|2024-12-16|pending
+HK0000666666|HKD|XHK|HK|Sun Hung Kai Props|Other|2024-12-16|pending
+HK0000777777|HKD|XHK|HK|CK Hutchison|Other|2024-12-16|pending
+BRGGBRACNPR8|BRL|LATAM|BR|Gerdau SA|Other|2024-12-16|pending
+BRSUZB3ACNOR5|BRL|LATAM|BR|Suzano SA|Other|2024-12-16|pending
+MXP369181377|MXN|LATAM|MX|FEMSA|Other|2024-12-16|pending
+CLP1234567890|CLP|LATAM|CL|SQM SA|Other|2024-12-16|pending
+ARYPF470281|ARS|LATAM|AR|YPF SA|Other|2024-12-16|pending

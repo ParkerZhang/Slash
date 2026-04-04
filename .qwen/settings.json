@@ -3,7 +3,14 @@
     "allow": [
       "Bash(npm run *)",
       "Bash(npm link)",
-      "Bash(tui-slash)"
+      "Bash(tui-slash)",
+      "Bash(mkdir *)",
+      "Bash(sort)",
+      "Bash(comm *)",
+      "Bash(echo *)",
+      "Bash(npm install)",
+      "Bash(find *)",
+      "Bash(cp *)"
     ]
   },
   "$version": 3

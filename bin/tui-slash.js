@@ -6,7 +6,7 @@ import path from 'node:path';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, '..');
 
-const child = spawn('npx', ['tsx', 'src/index.tsx'], {
+const child = spawn('npx', ['tsx', 'src/tui/index.tsx'], {
     cwd: projectRoot,
     stdio: 'inherit',
 });

@@ -3,6 +3,7 @@
 ## System Requirements
 - **Node.js**: >= 18.0.0
 - **npm**: >= 9.0.0
+- **Ollama**: installed locally for AI schema features
 
 ## Runtime Dependencies
 | Package        | Version    | Purpose                              |
@@ -35,3 +36,9 @@ npm start          # Run the application
 npm test           # Run tests
 npm run test:watch # Run tests in watch mode
 ```
+
+## V2 Feature Requirements
+
+- **AI features** require a local Ollama model and a working `ollama` CLI on `PATH`.
+- **Refresh on the fly** is intended for command/core changes and does not fully hot-reload the Ink UI tree.
+- **Schema workflow** depends on generating or attaching schema metadata to a loaded file, typically via `/ai <id>`.

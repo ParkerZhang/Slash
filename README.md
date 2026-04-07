@@ -46,21 +46,6 @@ tui-slash/
 └── package.json
 ```
 
-## V2.1 Architecture Summary
-
-- **`src/tui/`** - Ink UI with banner cycling, output scrolling, haiku banners
-- **`src/commands/`** - Slash commands including `/cluster`, `/ai analyze`, `/ai train`, `/aiProvider`
-- **`src/core/`** - Clustering (K-means), local embeddings (all-MiniLM-L6-v2), diff logic, types
-- **`src/ai/`** - Ollama integration and streaming schema inference helpers
-- **`src/train-ai/`** - AI training workflow with provider management, guided prompts, persistence
-- **`modelFiles/`** - Local embedding model cache (~23MB, auto-downloaded)
-
-## Tech Stack
-
-- TypeScript
-- Ink (TUI framework)
-- React
-
 ## Installation
 
 ```bash
@@ -77,21 +62,50 @@ npm install
 ## Usage
 
 ```bash
+# Start full TUI (Ink/React)
 npm start
-# Or via CLI command:
-tui-slash
+
+# Start Minimal TUI (Readline mode - no dependencies)
+npm run start:minimal
+
+# Run non-interactive command collection
+npm run cli -- "/load f1 data.csv /diff f1 f2"
 ```
 
-Basic V2 flow:
+## Non-Interactive CLI (Command Collection)
 
+You can run a sequence of commands without entering the TUI by using the `cli` script. This is ideal for CI/CD pipelines or batch processing.
+
+### Example: Batch Load, Diff, and Export
 ```bash
-/model gemma4:latest
-/load f1 data/elasticSearchResult.json
-/ai f1
-/schema f1
-/ai f1 --selected-only
-/saveSchema f1 /tmp/f1-schema.json
-/refresh
+npm run cli -- "/load req SecurityPricingRequest.csv /load resp SecurityPricingResponse.csv /diff req resp /cat req-diff-resp /save req-diff-resp fromNewCli.csv"
+```
+
+**Sample Output:**
+```text
+> Executing: /load req SecurityPricingRequest.csv
+Loaded SecurityPricingRequest.csv as 'req' (59 rows) | Key field: isin
+
+> Executing: /load resp SecurityPricingResponse.csv
+Loaded SecurityPricingResponse.csv as 'resp' (52 rows) | Key field: isin
+
+> Executing: /diff req resp
+Created 'req-diff-resp' with 8 records
+
+> Executing: /cat req-diff-resp
+--- req-diff-resp (8/8 records) ---
+isin|currency|exchange_code|country|name|sector|requested_date|status
+BRPETRACNPR6|BRL|LATAM|BR|Petrobras PN|Energy|2024-12-16|pending
+BRVALEACNOR0|BRL|LATAM|BR|VALE SA|Energy|2024-12-16|pending
+BRITUBACNOR4|BRL|LATAM|BR|Itau Unibanco|Banking|2024-12-16|pending
+MXP370711014|MXN|LATAM|MX|America Movil|Automotive|2024-12-16|pending
+MXP001661018|MXN|LATAM|MX|Walmart de Mexico|Retail|2024-12-16|pending
+CLP7847L1080|CLP|LATAM|CL|Enel Chile|Energy|2024-12-16|pending
+CLP249051066|CLP|LATAM|CL|Banco de Chile|Other|2024-12-16|pending
+ARBCOM460L12|ARS|LATAM|AR|Grupo Financiero Galicia|Banking|2024-12-16|pending
+
+> Executing: /save req-diff-resp fromNewCli.csv
+Saved req-diff-resp (8 records) to /home/u/tui-slash/data/fromNewCli.csv
 ```
 
 ## Commands
@@ -109,6 +123,7 @@ Basic V2 flow:
 | `/load <id> <file>` | Load JSON file (default: `./data/`) |
 | `/loadCsv <id> <file> [sep]` | Load CSV file (default separator: `\|`, default dir: `./data/`) |
 | `/preview <id>` | Preview loaded file |
+| `/cat <id> [limit]` | Print file contents to terminal |
 | `/files` | List loaded files |
 | `/compare <id1> <id2>` | Compare two files side by side |
 | `/match <reqId> <respId>` | Match request vs response by key fields |
@@ -129,119 +144,6 @@ Basic V2 flow:
 - `Esc` - Go back to previous view
 - `Tab` - Cycle through command/file suggestions
 
-## AI And Schema Workflow
-
-```bash
-# Set model and infer schema
-/model gemma4:latest
-/load f1 data/elasticSearchResult.json
-/ai f1
-
-# Inspect schema and choose only the parts you want
-/schema f1
-
-# Build a previewable selected-only schema file
-/ai f1 --selected-only
-
-# Export schema artifacts
-/saveSchema f1 /tmp/f1-full-schema.json
-/saveSchema f1 /tmp/f1-selected-schema.json --selected-only
-
-# Reload command/core changes without restarting the TUI
-/refresh
-```
-
-## AI Clustering Analysis
-
-Discover dominant groups and patterns in your data using **local embeddings** and K-means:
-
-### Quick Start
-```bash
-# Load your data
-/load f1 data/clustering.csv
-
-# Cluster with default 4 groups (Dominance mode)
-/cluster f1
-
-# Specify cluster count
-/cluster f1 6
-
-# Force specific field
-/cluster f1 4 --key country
-
-# Switch to Spreading mode
-/cluster f1 4 --Spreading
-```
-
-### Output Example
-```
-📊 Clustering Results (dominance)
-Field: country | Records: 58 | Clusters: 4
-──────────────────────────────────────────────────
-Banking ■
-  BR ●●●●
-  MX ●●
-  CL ●
-  AR ●
-
-Tech ▲
-  US ●●●●●
-  HK ●●●●
-
-──────────────────────────────────────────────────
-Saved as: f1-clustering-4
-```
-
-**Options:**
-- `--Dominance` (default): Find concentrated fields where few values dominate
-- `--Spreading`: Find evenly distributed fields (high entropy)
-- `--key <field>`: Force clustering on specific field
-- `-k <field>`: Shorthand for --key
-
-## /ai analyze Workflow
-
-Full AI-powered analysis with clustering:
-
-```bash
-# 1. Load your data
-/load missing data/SecurityPricingRequest.csv
-
-# 2. Run AI analysis with natural language question
-/ai analyze missing "what are the dominant groups, top 4 clusters"
-```
-
-**How it works:**
-1. **Local Embeddings**: Records embedded using all-MiniLM-L6-v2 (no Ollama needed)
-2. **Multi-Dimensional Features**: Combines semantic + geographic features
-3. **K-Means Clustering**: Groups similar records automatically
-4. **AI Interpretation**: Your selected model analyzes patterns and provides insights
-
-**Mental Model Visualization:**
-```
-Sector Symbol
-  COUNTRY ●●●●    COUNTRY ●●    COUNTRY ●
-```
-
-- Each cluster shows dominant sector with symbol
-- Country distribution shown with dots (each ● = 1 record)
-- Easy to spot geographic concentration or spread
-
-## AI Compare Example
-
-Prompt:
-
-```bash
-/ai compare f1 f2 "what <f1> is missing in <f2>, and what the pattern is"
-```
-
-Example V2 findings the AI can surface:
-
-- Suggests pricing vendor coverage is limited to Tier 1 liquidity pools.
-- LATAM and certain regional exchanges may be missing from the response.
-- Response adds fields like `price` and `business_date`.
-- Response transforms `status` from `pending` into `active` or `inactive`.
-- Response date can lag the request date, for example `2024-12-15` vs `2024-12-16`.
-
 ## View Modes
 
 - **main** - Main input panel with command history
@@ -252,10 +154,3 @@ Example V2 findings the AI can surface:
 - **match** - Match results between request and response
 - **keyfield** - Select key field for matching
 - **schema** - Inspect the root schema and multi-select sub-schemas
-
-## File Path Resolution
-
-Files are resolved in this order:
-1. Absolute paths (e.g., `/home/user/data/file.csv`)
-2. Paths starting with `data/` or `./data/`
-3. Relative to `./data/` directory (default)

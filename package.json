@@ -8,6 +8,8 @@
   },
   "scripts": {
     "start": "script -q /dev/null -c \"npx tsx src/tui/index.tsx\"",
+    "start:minimal": "tsx src/minimal-tui.ts",
+    "cli": "tsx src/cli.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "download-model": "node scripts/download-model.js"

@@ -6,7 +6,7 @@ import { diffFiles } from '../core/diff.js';
 import { addLoadedFile, setSelectedModel } from '../core/historyManager.js';
 import { getAvailableModels, inferSchemaForDataStreaming, runPromptStreaming } from '../ai/modelManager.js';
 import { getLocalEmbeddings } from '../core/localEmbeddings.js';
-import { kMeans, kMeansCosine, formatClusterSummary, findDominantTermsForCluster, buildMultiDimensionalFeatures, evaluateClusters, formatMentalModelVisualization, formatEnhancedClusterSummary, twoStageClustering } from '../core/clustering.js';
+import { kMeans, kMeansCosine, formatClusterSummary, findDominantTermsForCluster, buildMultiDimensionalFeatures, evaluateClusters, formatMentalModelVisualization, formatEnhancedClusterSummary, twoStageClustering, buildClusterProfile } from '../core/clustering.js';
 import { AiProviderCommand, ShowPromptCommand, executeAiTrain, executeAiDebug } from '../train-ai/command.js';
 import { ClusterCommand } from './clusterCommand.js';
 import alasql from 'alasql';
@@ -73,6 +73,40 @@ function getComparisonKeyFields(file: LoadedFile): string[] {
     const autoKeys = headers.filter((h) => ['isin', 'currency', 'exchange_code'].includes(h.toLowerCase()));
     return autoKeys.length > 0 ? autoKeys : (file.keyField ? [file.keyField] : []);
 }
+
+// --- Cat Command ---
+export const CatCommand: SlashCommand = {
+    name: '/cat',
+    description: 'Print file contents to terminal (Usage: /cat <id> [limit])',
+    execute: (args, workspace) => {
+        const parts = args.trim().split(/\s+/).filter(Boolean);
+        if (parts.length < 1) return { output: 'Usage: /cat <id> [limit]' };
+        
+        const fileId = parts[0];
+        const limit = parts[1] ? parseInt(parts[1], 10) : 10;
+        
+        const loadedFiles = workspace.getLoadedFiles();
+        const file = loadedFiles.get(fileId);
+        if (!file) return { output: `File '${fileId}' not loaded` };
+        
+        const hits = file.data.hits.hits.slice(0, limit).map(h => h._source);
+        if (hits.length === 0) return { output: 'File is empty' };
+        
+        const headers = Object.keys(hits[0]);
+        const lines = [
+            headers.join('|'),
+            ...hits.map(row => headers.map(h => String(row[h] ?? '')).join('|'))
+        ];
+        
+        return { 
+            output: [
+                `--- ${fileId} (${hits.length}/${file.data.hits.total.value} records) ---`,
+                ...lines,
+                file.data.hits.total.value > limit ? `... (${file.data.hits.total.value - limit} more records)` : ''
+            ].filter(Boolean).join('\n')
+        };
+    }
+};
 
 // --- Help Command ---
 export const HelpCommand: SlashCommand = {
@@ -880,97 +914,21 @@ async function executeAiAnalyze(
 
         workspace.setCommandOutput?.([
             `Running /ai analyze for '${fileId}'...`,
-            `Running K-means clustering (${k} clusters)...`,
+            `Running multi-dimensional clustering (${k} clusters)...`,
         ]);
 
-        // Run KMeans
-        const clusteringResult = kMeans(nameEmbeddings, k);
+        // Use advanced multi-dimensional clustering
+        const finalFeatures = buildMultiDimensionalFeatures(records, nameEmbeddings);
+        const clusteringResult = kMeans(finalFeatures, k);
+        const evaluation = evaluateClusters(clusteringResult.clusters, records);
 
-        // Build clustering output
-        const lines: string[] = [];
-        lines.push('📊 Clustering Results');
-        lines.push(`Records: ${records.length} | Clusters: ${k}`);
-        lines.push('─'.repeat(50));
-
-        // Infer sector if not present
-        const inferSector = (name: string): string => {
-            const n = name.toLowerCase();
-            if (n.includes('bank') || n.includes('financial') || n.includes('ufj') || n.includes('itau') || n.includes('galicia') || n.includes('merchants') || n.includes('insurance') || n.includes('ping an')) return 'Banking';
-            if (n.includes('apple') || n.includes('microsoft') || n.includes('google') || n.includes('alphabet') || n.includes('sony') || n.includes('panasonic') || n.includes('tencent') || n.includes('alibaba') || n.includes('xiaomi') || n.includes('meituan') || n.includes('jd.com') || n.includes('amazon') || n.includes('meta') || n.includes('lenovo')) return 'Tech';
-            if (n.includes('petro') || n.includes('vale') || n.includes('shell') || n.includes('enel') || n.includes('ypf') || n.includes('suzano')) return 'Energy';
-            if (n.includes('motor') || n.includes('auto') || n.includes('toyota') || n.includes('geely')) return 'Automotive';
-            if (n.includes('vodafone') || n.includes('kddi') || n.includes('telecom') || n.includes('america movil')) return 'Telecom';
-            if (n.includes('seven & i') || n.includes('bimbo') || n.includes('cemex') || n.includes('walmart') || n.includes('falabella') || n.includes('localiza')) return 'Retail';
-            return 'Other';
-        };
-
-        const SECTOR_SYMBOLS: Record<string, string> = {
-            'Tech': '▲', 'Banking': '■', 'Energy': '◆', 'Automotive': '●', 'Telecom': '◉', 'Retail': '◈', 'Other': '•',
-        };
-
-        // Helper to get field value with multiple name variations
-        const getFieldValue = (rec: Record<string, unknown>, ...names: string[]): string => {
-            for (const name of names) {
-                const val = rec[name];
-                if (val !== undefined && val !== null) return String(val);
-            }
-            return '';
-        };
-
-        // Build cluster data for AI prompt
-        const clusterDetails: string[] = [];
-
-        for (let c = 0; c < clusteringResult.clusters.length; c++) {
-            const cluster = clusteringResult.clusters[c];
-            const members = cluster.members;
-            
-            const countryCount: Record<string, number> = {};
-            const sectorCount: Record<string, number> = {};
-            const sampleRecords: string[] = [];
-            
-            members.forEach((idx: number) => {
-                const rec = records[idx];
-                if (rec) {
-                    const country = getFieldValue(rec, 'country', 'Country', 'COUNTRY', 'xchg', 'exchange', 'exchange_code').toUpperCase() || 'N/A';
-                    const name = getFieldValue(rec, 'name', 'Name', 'NAME') || 'Unknown';
-                    const sector = rec.sector || rec.Sector || inferSector(name);
-                    
-                    countryCount[country] = (countryCount[country] || 0) + 1;
-                    sectorCount[sector] = (sectorCount[sector] || 0) + 1;
-                    
-                    if (sampleRecords.length < 5) {
-                        sampleRecords.push(`${name} (${country})`);
-                    }
-                }
-            });
-
-            const topSector = Object.entries(sectorCount).sort((a, b) => b[1] - a[1])[0];
-            const symbol = SECTOR_SYMBOLS[topSector?.[0] || 'Other'] || '•';
-
-            lines.push('');
-            lines.push(`${topSector?.[0] || 'Other'} ${symbol}`);
-            
-            const sortedCountries = Object.entries(countryCount).sort((a, b) => b[1] - a[1]);
-            for (const [country, count] of sortedCountries) {
-                const dots = '●'.repeat(Math.min(count, 10));
-                lines.push(`  ${country} ${dots}`);
-            }
-
-            // Build detailed cluster info for AI
-            clusterDetails.push(`Cluster ${c + 1} (${members.length} records):`);
-            clusterDetails.push(`  Top sector: ${topSector?.[0] || 'Other'}`);
-            clusterDetails.push(`  Country distribution: ${sortedCountries.map(([c, n]) => `${c}(${n})`).join(', ')}`);
-            clusterDetails.push(`  Sample records: ${sampleRecords.join(', ')}`);
-        }
-
-        lines.push('');
-        lines.push('─'.repeat(50));
-        lines.push(`Saved as: ${fileId}-clustering-${k}`);
-        lines.push('Tip: /files to list, /preview to browse');
+        // Build clustering summary
+        const clusteringSummary = formatEnhancedClusterSummary(clusteringResult.clusters, records, evaluation);
+        const visualization = formatMentalModelVisualization(clusteringResult.clusters, records);
 
         // Save clustering result
         const clusteringFileId = `${fileId}-clustering-${k}`;
-        const clusteringData: ElasticSearchResult = {
+        workspace.addFile(clusteringFileId, `${file.name} (${k} clusters)`, {
             took: 0,
             timed_out: false,
             hits: {
@@ -986,49 +944,65 @@ async function executeAiAnalyze(
                     },
                 })),
             },
-        };
+        } as any);
 
-        workspace.addFile(clusteringFileId, `${file.name} (${k} clusters)`, clusteringData);
+        // Build detailed cluster info for AI
+        const clusterDetails: string[] = [];
+        for (let c = 0; c < clusteringResult.clusters.length; c++) {
+            const cluster = clusteringResult.clusters[c];
+            const members = cluster.members;
+            const profile = buildClusterProfile(cluster, records);
+            const sampleRecords = members.slice(0, 5).map(idx => {
+                const rec = records[idx];
+                const name = rec.name || rec.Name || 'Unknown';
+                const country = (rec.country || rec.Country || 'N/A').toString().toUpperCase();
+                return `${name} (${country})`;
+            });
 
-        // Run AI analysis if model is set
-        const model = workspace.getModel().trim();
+            clusterDetails.push(`Cluster ${c + 1} (${members.length} records):`);
+            clusterDetails.push(`  Top sectors: ${Object.entries(profile.sectorClusters).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([s,n])=>`${s}(${n})`).join(', ')}`);
+            clusterDetails.push(`  Top countries: ${Object.entries(profile.geoClusters).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([co,n])=>`${co.toUpperCase()}(${n})`).join(', ')}`);
+            clusterDetails.push(`  Sample records: ${sampleRecords.join(', ')}`);
+        }
+
+        // Run AI analysis
         let aiAnalysis = '';
-        
-        if (model && model !== 'default') {
-            workspace.setCommandOutput?.([
-                `Running /ai analyze for '${fileId}'...`,
-                `Generating AI analysis with ${model}...`,
-            ]);
+        workspace.setCommandOutput?.([
+            `Running /ai analyze for '${fileId}'...`,
+            `Generating AI analysis with ${model}...`,
+        ]);
 
-            const prompt = [
-                'You are analyzing clustering results from a dataset.',
-                `User question: "${question}"`,
-                '',
-                'CLUSTERING RESULTS:',
-                lines.join('\n'),
-                '',
-                'DETAILED CLUSTER DATA:',
-                clusterDetails.join('\n'),
-                '',
-                'Based on the clustering data above, answer the user\'s question.',
-                'Be specific about what each cluster contains.',
-                'Mention the dominant sectors, countries, and record names.',
-            ].join('\n');
+        const prompt = [
+            'You are analyzing multi-dimensional clustering results from a dataset.',
+            `User question: "${question}"`,
+            '',
+            'CLUSTERING SUMMARY:',
+            clusteringSummary,
+            '',
+            'VISUALIZATION:',
+            visualization,
+            '',
+            'DETAILED CLUSTER DATA:',
+            clusterDetails.join('\n'),
+            '',
+            'Based on the clustering data above, answer the user\'s question.',
+            'Be specific about what each cluster contains.',
+            'Mention the dominant sectors, countries, and record names.',
+        ].join('\n');
 
-            try {
-                aiAnalysis = await runPromptStreaming(model, prompt, (chunk) => {
-                    workspace.setCommandOutput?.([
-                        `Running AI analysis...`,
-                        chunk.split('\n').slice(-3).join('\n'),
-                    ]);
-                });
-            } catch (error) {
-                aiAnalysis = `AI analysis error: ${error instanceof Error ? error.message : String(error)}`;
-            }
+        try {
+            aiAnalysis = await runPromptStreaming(model, prompt, (chunk) => {
+                workspace.setCommandOutput?.([
+                    `Running AI analysis...`,
+                    chunk.split('\n').slice(-3).join('\n'),
+                ]);
+            });
+        } catch (error) {
+            aiAnalysis = `AI analysis error: ${error instanceof Error ? error.message : String(error)}`;
         }
 
         return {
-            output: lines.join('\n') + (aiAnalysis ? `\n\n🤖 AI Analysis:\n${aiAnalysis}` : ''),
+            output: clusteringSummary + '\n\n' + visualization + (aiAnalysis ? `\n\n🤖 AI Analysis:\n${aiAnalysis}` : ''),
         };
     } catch (error) {
         return { output: `AI Analyze Error: ${error instanceof Error ? error.message : String(error)}` };
@@ -1416,6 +1390,7 @@ export function registerAllCommands(registry: CommandRegistry = globalRegistry) 
     registry.register(LoadCsvCommand);
     registry.register(AnalyzeCommand);
     registry.register(PreviewCommand);
+    registry.register(CatCommand);
     registry.register(FilesCommand);
     registry.register(CompareCommand);
     registry.register(MatchCommand);

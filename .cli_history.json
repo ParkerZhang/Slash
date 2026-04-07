@@ -32,6 +32,18 @@
       "name": "missing.csv",
       "keyField": "isin",
       "fileFormat": "csv"
+    },
+    {
+      "id": "req",
+      "name": "SecurityPricingRequest.csv",
+      "keyField": "isin",
+      "fileFormat": "csv"
+    },
+    {
+      "id": "resp",
+      "name": "SecurityPricingResponse.csv",
+      "keyField": "isin",
+      "fileFormat": "csv"
     }
   ],
   "selectedModel": "gemma4:latest"

@@ -1,8 +1,12 @@
 import { pipeline, env } from '@huggingface/transformers';
 import * as path from 'path';
+import { ensureModelFile } from './modelLoader.js';
 
 // Use local modelFiles folder in project root
 const MODEL_DIR = path.join(process.cwd(), 'modelFiles');
+
+// Path to onnx model to check parts
+const MODEL_ONNX = path.join(MODEL_DIR, 'Xenova', 'all-MiniLM-L6-v2', 'onnx', 'model.onnx');
 
 // Set cache location
 env.cacheDir = MODEL_DIR;
@@ -12,6 +16,9 @@ let isInitialized = false;
 
 async function getExtractor() {
     if (!extractor) {
+        // Before using transformers, ensure the onnx file is recombined if only parts exist
+        ensureModelFile(MODEL_ONNX);
+        
         extractor = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', {
             quantized: true,
         });

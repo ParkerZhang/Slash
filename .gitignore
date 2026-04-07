@@ -1,4 +1,6 @@
 # Dependencies
+modelFiles/**/model.onnx
+!modelFiles/**/model.onnx.part*
 node_modules/
 
 # Build output

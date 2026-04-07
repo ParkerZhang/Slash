@@ -1,0 +1,9 @@
+isin,currency,exchange_code,country,name,sector,requested_date,status
+BRPETRACNPR6,BRL,LATAM,BR,Petrobras PN,Energy,2024-12-16,pending
+BRVALEACNOR0,BRL,LATAM,BR,VALE SA,Energy,2024-12-16,pending
+BRITUBACNOR4,BRL,LATAM,BR,Itau Unibanco,Banking,2024-12-16,pending
+MXP370711014,MXN,LATAM,MX,America Movil,Automotive,2024-12-16,pending
+MXP001661018,MXN,LATAM,MX,Walmart de Mexico,Retail,2024-12-16,pending
+CLP7847L1080,CLP,LATAM,CL,Enel Chile,Energy,2024-12-16,pending
+CLP249051066,CLP,LATAM,CL,Banco de Chile,Other,2024-12-16,pending
+ARBCOM460L12,ARS,LATAM,AR,Grupo Financiero Galicia,Banking,2024-12-16,pending

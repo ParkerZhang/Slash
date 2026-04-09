@@ -3,7 +3,7 @@ import * as modelManager from '../ai/modelManager.js';
 import { CommandRegistry } from '../commands/commandRegistry.js';
 import { MemoryWorkspace } from '../core/runner.js';
 import * as fs from 'fs';
-import { HelpCommand, LoadJsonCommand, LoadCsvCommand, DiffCommand, SqlCommand, ModelCommand, AiCommand, SchemaCommand, SaveSchemaCommand, AnalyzeCommand } from '../commands/index.js';
+import { HelpCommand, LoadJsonCommand, LoadCsvCommand, DiffCommand, MinusCommand, SqlCommand, ModelCommand, AiCommand, SchemaCommand, SaveSchemaCommand, AnalyzeCommand } from '../commands/index.js';
 
 describe('Slash Commands', () => {
     let workspace: MemoryWorkspace;
@@ -18,6 +18,7 @@ describe('Slash Commands', () => {
         registry.register(LoadCsvCommand);
         registry.register(AnalyzeCommand);
         registry.register(DiffCommand);
+        registry.register(MinusCommand);
         registry.register(SqlCommand);
         registry.register(AiCommand);
         registry.register(SchemaCommand);
@@ -319,14 +320,44 @@ describe('Slash Commands', () => {
     it('DiffCommand should diff two loaded files', async () => {
         await registry.execute('/loadJson f1 data/elasticSearchResult.json', workspace);
         await registry.execute('/loadJson f2 data/elasticSearchResult_2.json', workspace);
-        
+
         // Set keyField since these files don't have isin/currency/etc.
         workspace.updateFile('f1', { keyField: 'name' });
         workspace.updateFile('f2', { keyField: 'name' });
-        
+
         const result = await registry.execute('/diff f1 f2', workspace);
         expect(result.output).toContain("Created 'f1-diff-f2'");
         expect(workspace.getLoadedFiles().has('f1-diff-f2')).toBe(true);
+    });
+
+    it('DiffCommand should preserve keyField in result file', async () => {
+        await registry.execute('/loadJson f1 data/elasticSearchResult.json', workspace);
+        await registry.execute('/loadJson f2 data/elasticSearchResult_2.json', workspace);
+
+        // Set keyField since these files don't have isin/currency/etc.
+        workspace.updateFile('f1', { keyField: 'name' });
+        workspace.updateFile('f2', { keyField: 'name' });
+
+        await registry.execute('/diff f1 f2', workspace);
+        
+        const diffFile = workspace.getLoadedFiles().get('f1-diff-f2');
+        expect(diffFile).toBeDefined();
+        expect(diffFile!.keyField).toBe('name');
+    });
+
+    it('MinusCommand should preserve keyField in result file', async () => {
+        await registry.execute('/loadJson f1 data/elasticSearchResult.json', workspace);
+        await registry.execute('/loadJson f2 data/elasticSearchResult_2.json', workspace);
+
+        // Set keyField since these files don't have isin/currency/etc.
+        workspace.updateFile('f1', { keyField: 'name' });
+        workspace.updateFile('f2', { keyField: 'name' });
+
+        const result = await registry.execute('/minus f1 f2', workspace);
+        
+        const minusFile = workspace.getLoadedFiles().get('f1-minus-f2');
+        expect(minusFile).toBeDefined();
+        expect(minusFile!.keyField).toBe('name');
     });
 
     it('SqlCommand should execute SQL and switch to preview', async () => {

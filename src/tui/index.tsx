@@ -352,6 +352,12 @@ const App = () => {
     const [spinnerFrame, setSpinnerFrame] = useState(0);
     const [historyIndex, setHistoryIndex] = useState(-1);
     const [loadedFiles, setLoadedFiles] = useState<Map<string, LoadedFile>>(new Map());
+    const loadedFilesRef = useRef<Map<string, LoadedFile>>(loadedFiles);
+    
+    // Keep ref in sync with state
+    useEffect(() => {
+        loadedFilesRef.current = loadedFiles;
+    }, [loadedFiles]);
     const [model, setModel] = useState('default');
     const [registry, setRegistry] = useState<CommandRegistry>(() => createRegisteredCommandRegistry());
     const [bannerIndex, setBannerIndex] = useState<number>(() => {
@@ -399,13 +405,16 @@ const App = () => {
 
     // Implementation of the Workspace interface for TUI
     const workspace = useMemo<Workspace>(() => ({
-        getLoadedFiles: () => loadedFiles,
+        getLoadedFiles: () => loadedFilesRef.current,
         addFile: (id, name, data) => {
             setLoadedFiles(prev => {
                 const newMap = new Map(prev);
                 newMap.set(id, { id, name, data, fileFormat: 'generated' });
                 return newMap;
             });
+            // Also update ref immediately for synchronous access
+            loadedFilesRef.current = new Map(loadedFilesRef.current);
+            loadedFilesRef.current.set(id, { id, name, data, fileFormat: 'generated' });
         },
         updateFile: (id, updates) => {
             setLoadedFiles(prev => {
@@ -416,6 +425,12 @@ const App = () => {
                 }
                 return newMap;
             });
+            // Also update ref immediately for synchronous access
+            const currentMap = loadedFilesRef.current;
+            const file = currentMap.get(id);
+            if (file) {
+                currentMap.set(id, { ...file, ...updates });
+            }
             if (updates.keyField) {
                 updateKeyField(id, updates.keyField);
             }
@@ -426,6 +441,8 @@ const App = () => {
                 newMap.delete(id);
                 return newMap;
             });
+            // Also update ref immediately for synchronous access
+            loadedFilesRef.current.delete(id);
         },
         getModel: () => model,
         setModel: (nextModel) => {

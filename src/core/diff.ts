@@ -13,9 +13,12 @@ export function diffFiles(
     const getKeyFields = (file: LoadedFile): string[] => {
         if (!file || file.data.hits.hits.length === 0) return [];
         const headers = Object.keys(file.data.hits.hits[0]._source);
-        return headers.filter(
-            (h: string) => ['isin', 'currency', 'exchange_code'].includes(h.toLowerCase())
-        );
+        return file.keyField
+            ? [file.keyField]
+            :
+            headers.filter(
+                (h: string) => ['isin', 'currency', 'exchange_code'].includes(h.toLowerCase())
+            );
     };
 
     const keyFields1 = getKeyFields(file1);

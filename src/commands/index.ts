@@ -636,6 +636,12 @@ export const MinusCommand: SlashCommand = {
         
         const newId = id1 + '-minus-' + id2;
         workspace.addFile(newId, file1.name + ' - ' + file2.name, newData);
+        
+        // Preserve keyField from file1 for the minus result
+        if (useKeyFields1.length > 0) {
+            workspace.updateFile(newId, { keyField: useKeyFields1[0] });
+        }
+        
         return { output: `Created '${newId}' with ${minusHits.length} records` };
     }
 };
@@ -830,6 +836,22 @@ export const DiffCommand: SlashCommand = {
         }
 
         workspace.addFile(result.newId, file1.name + ' diff ' + file2.name, result.result);
+
+        // Preserve keyField from file1 for the diff result
+        const getKeyFields = (file: LoadedFile): string[] => {
+            if (!file || file.data.hits.hits.length === 0) return [];
+            const headers = Object.keys(file.data.hits.hits[0]._source);
+            const autoDetected = headers.filter((h: string) => ['isin', 'currency', 'exchange_code'].includes(h.toLowerCase()));
+            return file.keyField ? [file.keyField] : autoDetected;
+        };
+
+        const keyFields1 = getKeyFields(file1);
+        const useKeyFields1 = keyFields1.length > 0 ? keyFields1 : file1.keyField ? [file1.keyField] : [];
+
+        if (useKeyFields1.length > 0) {
+            workspace.updateFile(result.newId, { keyField: useKeyFields1[0] });
+        }
+
         return { output: `Created '${result.newId}' with ${result.recordCount} records` };
     }
 };

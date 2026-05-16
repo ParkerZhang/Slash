@@ -1,0 +1,1323 @@
+{
+  "AI": {
+    "name": "C3.ai, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "C3.ai, Inc.",
+    "source": "scan-auto"
+  },
+  "APPS": {
+    "name": "Digital Turbine, Inc.",
+    "type": "equity",
+    "exchange": "NCM",
+    "longname": "Digital Turbine, Inc.",
+    "source": "scan-auto"
+  },
+  "DJT": {
+    "name": "Trump Media & Technology Group ",
+    "type": "equity",
+    "exchange": "NGM",
+    "longname": "Trump Media & Technology Group Corp.",
+    "source": "scan-auto"
+  },
+  "DLO": {
+    "name": "DLocal Limited",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "DLocal Limited",
+    "source": "scan-auto"
+  },
+  "ENPH": {
+    "name": "Enphase Energy, Inc.",
+    "type": "equity",
+    "exchange": "NGM",
+    "longname": "Enphase Energy, Inc.",
+    "source": "scan-auto"
+  },
+  "FIG": {
+    "name": "Figma Inc",
+    "type": "equity",
+    "exchange": "NYS",
+    "longname": "Figma, Inc.",
+    "source": "scan-auto"
+  },
+  "GOLF": {
+    "name": "Acushnet Holdings Corp.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Acushnet Holdings Corp.",
+    "source": "scan-auto"
+  },
+  "HELP": {
+    "name": "Cybin Inc.",
+    "type": "equity",
+    "exchange": "NGM",
+    "longname": "Cybin D/B/A Helus Pharma",
+    "source": "scan-auto"
+  },
+  "INTC": {
+    "name": "Intel Corporation",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Intel Corporation",
+    "source": "scan-auto"
+  },
+  "IPOS": {
+    "name": "Renaissance Capital Greenwich F",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Renaissance International IPO ETF",
+    "source": "scan-auto"
+  },
+  "LIFE": {
+    "name": "Ethos Technologies Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Ethos Technologies Inc.",
+    "source": "scan-auto"
+  },
+  "META": {
+    "name": "Meta Platforms, Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Meta Platforms, Inc.",
+    "source": "scan-auto"
+  },
+  "MICC": {
+    "name": "The Magnum Ice Cream Company N.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "source": "scan-auto"
+  },
+  "MSFT": {
+    "name": "Microsoft Corporation",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Microsoft Corporation",
+    "source": "scan-auto"
+  },
+  "NOK": {
+    "name": "Nokia Corporation Sponsored",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Nokia Oyj",
+    "source": "scan-auto"
+  },
+  "NU": {
+    "name": "Nu Holdings Ltd.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Nu Holdings Ltd.",
+    "source": "scan-auto"
+  },
+  "NVDA": {
+    "name": "NVIDIA Corporation",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "NVIDIA Corporation",
+    "source": "scan-auto"
+  },
+  "ODDS": {
+    "name": "Pacer BlueStar Digital Entertai",
+    "type": "etf",
+    "exchange": "NGM",
+    "longname": "Pacer BlueStar Digital Entertainment ETF",
+    "source": "scan-auto"
+  },
+  "ONDS": {
+    "name": "Ondas Inc",
+    "type": "equity",
+    "exchange": "NCM",
+    "longname": "Ondas Inc.",
+    "source": "scan-auto"
+  },
+  "PC": {
+    "name": "Premium Catering (Holdings) Lim",
+    "type": "equity",
+    "exchange": "NCM",
+    "source": "scan-auto"
+  },
+  "PETS": {
+    "name": "PetMed Express, Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "PetMed Express, Inc.",
+    "source": "scan-auto"
+  },
+  "POET": {
+    "name": "POET Technologies Inc.",
+    "type": "equity",
+    "exchange": "NCM",
+    "longname": "POET Technologies Inc.",
+    "source": "scan-auto"
+  },
+  "SEDG": {
+    "name": "SolarEdge Technologies, Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "SolarEdge Technologies, Inc.",
+    "source": "scan-auto"
+  },
+  "SOC": {
+    "name": "Sable Offshore Corp.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Sable Offshore Corp.",
+    "source": "scan-auto"
+  },
+  "SPY": {
+    "name": "State Street SPDR S&P 500 ETF T",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "State Street SPDR S&P 500 ETF Trust",
+    "source": "scan-auto"
+  },
+  "TECH": {
+    "name": "Bio-Techne Corp",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Bio-Techne Corporation",
+    "source": "scan-auto"
+  },
+  "TM": {
+    "name": "Toyota Motor Corporation",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Toyota Motor Corporation",
+    "source": "scan-auto"
+  },
+  "TNGX": {
+    "name": "Tango Therapeutics, Inc.",
+    "type": "equity",
+    "exchange": "NGM",
+    "longname": "Tango Therapeutics, Inc.",
+    "source": "scan-auto"
+  },
+  "TSLA": {
+    "name": "Tesla, Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Tesla, Inc.",
+    "source": "scan-auto"
+  },
+  "TV": {
+    "name": "Grupo Televisa S.A.B.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Grupo Televisa, S.A.B.",
+    "source": "scan-auto"
+  },
+  "UK": {
+    "name": "Ucommune International Ltd",
+    "type": "equity",
+    "exchange": "NCM",
+    "longname": "Ucommune International Ltd",
+    "source": "scan-auto"
+  },
+  "ULTA": {
+    "name": "Ulta Beauty, Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Ulta Beauty, Inc.",
+    "source": "scan-auto"
+  },
+  "UNH": {
+    "name": "UnitedHealth Group Incorporated",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "UnitedHealth Group Incorporated",
+    "source": "scan-auto"
+  },
+  "USAS": {
+    "name": "Americas Gold and Silver Corpor",
+    "type": "equity",
+    "exchange": "ASE",
+    "longname": "Americas Gold and Silver Corporation",
+    "source": "scan-auto"
+  },
+  "XBOX": {
+    "name": "Roundhill Ultra Short Duration ",
+    "type": "etf",
+    "exchange": "BTS",
+    "source": "scan-auto"
+  },
+  "YSS": {
+    "name": "York Space Systems Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "source": "scan-auto"
+  },
+  "AAPL": {
+    "name": "Apple Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Apple Inc.",
+    "source": "scan-auto"
+  },
+  "ACV": {
+    "name": "AllianzGI Diversified Income & ",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Virtus Diversified Income & Convertible Fund",
+    "source": "scan-auto"
+  },
+  "AKRE": {
+    "name": "Akre Focus ETF",
+    "type": "etf",
+    "exchange": "PCX",
+    "source": "scan-auto"
+  },
+  "ALPS": {
+    "name": "ALPS Group Inc",
+    "type": "equity",
+    "exchange": "NGM",
+    "longname": "Alps Group Inc",
+    "source": "scan-auto"
+  },
+  "AMAT": {
+    "name": "Applied Materials, Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Applied Materials, Inc.",
+    "source": "scan-auto"
+  },
+  "AMS": {
+    "name": "American Shared Hospital Servic",
+    "type": "equity",
+    "exchange": "ASE",
+    "longname": "American Shared Hospital Services",
+    "source": "scan-auto"
+  },
+  "AMZN": {
+    "name": "Amazon.com, Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Amazon.com, Inc.",
+    "source": "scan-auto"
+  },
+  "ARM": {
+    "name": "Arm Holdings plc",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Arm Holdings plc",
+    "source": "scan-auto"
+  },
+  "ARMK": {
+    "name": "Aramark",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Aramark",
+    "source": "scan-auto"
+  },
+  "ASTS": {
+    "name": "AST SpaceMobile, Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "AST SpaceMobile, Inc.",
+    "source": "scan-auto"
+  },
+  "AURA": {
+    "name": "Aura Biosciences, Inc.",
+    "type": "equity",
+    "exchange": "NGM",
+    "longname": "Aura Biosciences, Inc.",
+    "source": "scan-auto"
+  },
+  "AVOS": {
+    "name": "Avos Global Equities ETF",
+    "type": "etf",
+    "exchange": "NGM",
+    "longname": "Avos Global Equities ETF",
+    "source": "scan-auto"
+  },
+  "B": {
+    "name": "Barrick Mining Corporation",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Barrick Mining Corporation",
+    "source": "scan-auto"
+  },
+  "BA": {
+    "name": "Boeing Company (The)",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "The Boeing Company",
+    "source": "scan-auto"
+  },
+  "BABA": {
+    "name": "Alibaba Group Holding Limited",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Alibaba Group Holding Limited",
+    "source": "scan-auto"
+  },
+  "BBH": {
+    "name": "VanEck Biotech ETF",
+    "type": "etf",
+    "exchange": "NGM",
+    "longname": "VanEck Biotech ETF",
+    "source": "scan-auto"
+  },
+  "BIRK": {
+    "name": "Birkenstock Holding plc",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Birkenstock Holding plc",
+    "source": "scan-auto"
+  },
+  "BMO": {
+    "name": "Bank Of Montreal",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Bank of Montreal",
+    "source": "scan-auto"
+  },
+  "BN": {
+    "name": "Brookfield Corporation",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Brookfield Corporation",
+    "source": "scan-auto"
+  },
+  "BNKK": {
+    "name": "Bonk, Inc.",
+    "type": "equity",
+    "exchange": "NCM",
+    "longname": "Bonk, Inc.",
+    "source": "scan-auto"
+  },
+  "BTDR": {
+    "name": "Bitdeer Technologies Group",
+    "type": "equity",
+    "exchange": "NCM",
+    "longname": "Bitdeer Technologies Group",
+    "source": "scan-auto"
+  },
+  "CAT": {
+    "name": "Caterpillar, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Caterpillar Inc.",
+    "source": "scan-auto"
+  },
+  "CBRS": {
+    "name": "Cerebras Systems Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Cerebras Systems Inc.",
+    "source": "scan-auto"
+  },
+  "CCM": {
+    "name": "Concord Medical Services Holdin",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Concord Medical Services Holdings Limited",
+    "source": "scan-auto"
+  },
+  "CECO": {
+    "name": "CECO Environmental Corp.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "CECO Environmental Corp.",
+    "source": "scan-auto"
+  },
+  "CEG": {
+    "name": "Constellation Energy Corporatio",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Constellation Energy Corporation",
+    "source": "scan-auto"
+  },
+  "CF": {
+    "name": "CF Industries Holdings, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "CF Industries Holdings, Inc.",
+    "source": "scan-auto"
+  },
+  "CICC": {
+    "name": "China Internet Cafe Holdings Group, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "China Internet Cafe Holdings Group, Inc.",
+    "source": "scan-auto"
+  },
+  "CLS": {
+    "name": "Celestica, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Celestica Inc.",
+    "source": "scan-auto"
+  },
+  "CRCL": {
+    "name": "Circle Internet Group, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Circle Internet Group",
+    "source": "scan-auto"
+  },
+  "CRM": {
+    "name": "Salesforce, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Salesforce, Inc.",
+    "source": "scan-auto"
+  },
+  "CRMD": {
+    "name": "CorMedix Inc.",
+    "type": "equity",
+    "exchange": "NGM",
+    "longname": "CorMedix Inc.",
+    "source": "scan-auto"
+  },
+  "CSCO": {
+    "name": "Cisco Systems, Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Cisco Systems, Inc.",
+    "source": "scan-auto"
+  },
+  "CSIQ": {
+    "name": "Canadian Solar Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Canadian Solar Inc.",
+    "source": "scan-auto"
+  },
+  "DAC": {
+    "name": "Danaos Corporation",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Danaos Corporation",
+    "source": "scan-auto"
+  },
+  "DANA": {
+    "name": "Dana Limited Volatility ETF",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Dana Limited Volatility ETF",
+    "source": "scan-auto"
+  },
+  "DB": {
+    "name": "Deutsche Bank AG",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Deutsche Bank Aktiengesellschaft",
+    "source": "scan-auto"
+  },
+  "DDS": {
+    "name": "Dillard's, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Dillard's, Inc.",
+    "source": "scan-auto"
+  },
+  "DIA": {
+    "name": "State Street SPDR Dow Jones Ind",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "State Street SPDR Dow Jones Industrial Average ETF Trust",
+    "source": "scan-auto"
+  },
+  "DRAM": {
+    "name": "Roundhill Memory ETF",
+    "type": "etf",
+    "exchange": "BTS",
+    "source": "scan-auto"
+  },
+  "DT": {
+    "name": "Dynatrace, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Dynatrace, Inc.",
+    "source": "scan-auto"
+  },
+  "ECO": {
+    "name": "Okeanis Eco Tankers Corp.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "source": "scan-auto"
+  },
+  "ELM": {
+    "name": "Elm Market Navigator ETF",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Elm Market Navigator ETF",
+    "source": "scan-auto"
+  },
+  "ELWT": {
+    "name": "Elauwit Connection, Inc.",
+    "type": "equity",
+    "exchange": "NCM",
+    "longname": "Elauwit Connection, Inc.",
+    "source": "scan-auto"
+  },
+  "EMQQ": {
+    "name": "EMQQ The Emerging Markets Inter",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "EMQQ The Emerging Markets Internet ETF",
+    "source": "scan-auto"
+  },
+  "EPAM": {
+    "name": "EPAM Systems, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "EPAM Systems, Inc.",
+    "source": "scan-auto"
+  },
+  "FENC": {
+    "name": "Fennec Pharmaceuticals Inc.",
+    "type": "equity",
+    "exchange": "NCM",
+    "longname": "Fennec Pharmaceuticals Inc.",
+    "source": "scan-auto"
+  },
+  "FMQQ": {
+    "name": "FMQQ The Next Frontier Internet",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "FMQQ The Next Frontier Internet ETF",
+    "source": "scan-auto"
+  },
+  "FNDA": {
+    "name": "Schwab Fundamental U.S. Small C",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Schwab Fundamental U.S. Small Company ETF",
+    "source": "scan-auto"
+  },
+  "FNDX": {
+    "name": "Schwab Fundamental U.S. Large C",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Schwab Fundamental U.S. Large Company ETF",
+    "source": "scan-auto"
+  },
+  "FOX": {
+    "name": "Fox Corp",
+    "type": "equity",
+    "exchange": "NAS",
+    "longname": "Fox Corporation",
+    "source": "scan-auto"
+  },
+  "FPA": {
+    "name": "First Trust Asia Pacific Ex-Jap",
+    "type": "etf",
+    "exchange": "NGM",
+    "longname": "First Trust Asia Pacific Ex-Japan AlphaDEX Fund",
+    "source": "scan-auto"
+  },
+  "FPS": {
+    "name": "Forgent Power Solutions, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "source": "scan-auto"
+  },
+  "FRMI": {
+    "name": "Fermi Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Fermi Inc.",
+    "source": "scan-auto"
+  },
+  "GGM": {
+    "name": "GGM Macro Alignment ETF",
+    "type": "etf",
+    "exchange": "PCX",
+    "source": "scan-auto"
+  },
+  "GNE": {
+    "name": "Genie Energy Ltd.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Genie Energy Ltd.",
+    "source": "scan-auto"
+  },
+  "GOOS": {
+    "name": "Canada Goose Holdings Inc. Subo",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Canada Goose Holdings Inc.",
+    "source": "scan-auto"
+  },
+  "GRO": {
+    "name": "Brazil Potash Corp.",
+    "type": "equity",
+    "exchange": "ASE",
+    "longname": "Brazil Potash Corp.",
+    "source": "scan-auto"
+  },
+  "GS": {
+    "name": "Goldman Sachs Group, Inc. (The)",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "The Goldman Sachs Group, Inc.",
+    "source": "scan-auto"
+  },
+  "GURU": {
+    "name": "Global X Guru Index ETF",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Global X Guru Index ETF",
+    "source": "scan-auto"
+  },
+  "HCM": {
+    "name": "HUTCHMED (China) Limited",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "HUTCHMED (China) Limited",
+    "source": "scan-auto"
+  },
+  "HIMS": {
+    "name": "Hims & Hers Health, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Hims & Hers Health, Inc.",
+    "source": "scan-auto"
+  },
+  "HMC": {
+    "name": "Honda Motor Company, Ltd.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Honda Motor Co., Ltd.",
+    "source": "scan-auto"
+  },
+  "HULL": {
+    "name": "HULL",
+    "type": "equity",
+    "exchange": "ASE",
+    "source": "scan-auto"
+  },
+  "IDX": {
+    "name": "VanEck Indonesia Index ETF",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "VanEck Indonesia Index ETF",
+    "source": "scan-auto"
+  },
+  "IMSR": {
+    "name": "Terrestrial Energy Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Terrestrial Energy Inc.",
+    "source": "scan-auto"
+  },
+  "IMSRW": {
+    "name": "Terrestrial Energy Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Terrestrial Energy Inc.",
+    "source": "scan-auto"
+  },
+  "IPI": {
+    "name": "Intrepid Potash, Inc",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Intrepid Potash, Inc.",
+    "source": "scan-auto"
+  },
+  "JD": {
+    "name": "JD.com, Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "JD.com, Inc.",
+    "source": "scan-auto"
+  },
+  "KEP": {
+    "name": "Korea Electric Power Corporatio",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Korea Electric Power Corporation",
+    "source": "scan-auto"
+  },
+  "KGEI": {
+    "name": "Kolibri Global Energy Inc.",
+    "type": "equity",
+    "exchange": "NCM",
+    "longname": "Kolibri Global Energy Inc.",
+    "source": "scan-auto"
+  },
+  "KLAR": {
+    "name": "Klarna Group plc",
+    "type": "equity",
+    "exchange": "NYQ",
+    "source": "scan-auto"
+  },
+  "LEU": {
+    "name": "Centrus Energy Corp.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Centrus Energy Corp.",
+    "source": "scan-auto"
+  },
+  "LGN": {
+    "name": "Legence Corp.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Legence Corp.",
+    "source": "scan-auto"
+  },
+  "LI": {
+    "name": "Li Auto Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Li Auto Inc.",
+    "source": "scan-auto"
+  },
+  "LUCD": {
+    "name": "Lucid Diagnostics Inc.",
+    "type": "equity",
+    "exchange": "NCM",
+    "longname": "Lucid Diagnostics Inc.",
+    "source": "scan-auto"
+  },
+  "MAN": {
+    "name": "ManpowerGroup",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "ManpowerGroup Inc.",
+    "source": "scan-auto"
+  },
+  "MAX": {
+    "name": "MediaAlpha, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "MediaAlpha, Inc.",
+    "source": "scan-auto"
+  },
+  "MC": {
+    "name": "Moelis & Company",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Moelis & Company",
+    "source": "scan-auto"
+  },
+  "MFC": {
+    "name": "Manulife Financial Corporation",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Manulife Financial Corporation",
+    "source": "scan-auto"
+  },
+  "MFG": {
+    "name": "Mizuho Financial Group, Inc. Sp",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Mizuho Financial Group, Inc.",
+    "source": "scan-auto"
+  },
+  "MKAM": {
+    "name": "MKAM ETF",
+    "type": "etf",
+    "exchange": "NGM",
+    "longname": "MKAM ETF",
+    "source": "scan-auto"
+  },
+  "MNDY": {
+    "name": "monday.com Ltd.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "monday.com Ltd.",
+    "source": "scan-auto"
+  },
+  "MOS": {
+    "name": "Mosaic Company (The)",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "The Mosaic Company",
+    "source": "scan-auto"
+  },
+  "MUFG": {
+    "name": "Mitsubishi UFJ Financial Group,",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Mitsubishi UFJ Financial Group, Inc.",
+    "source": "scan-auto"
+  },
+  "NBIS": {
+    "name": "Nebius Group N.V.",
+    "type": "equity",
+    "exchange": "NMS",
+    "source": "scan-auto"
+  },
+  "NETL": {
+    "name": "Colterpoint Net Lease Real Esta",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Colterpoint Net Lease Real Estate ETF",
+    "source": "scan-auto"
+  },
+  "NGG": {
+    "name": "National Grid Transco, PLC Nati",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "National Grid plc",
+    "source": "scan-auto"
+  },
+  "NIQ": {
+    "name": "NIQ Global Intelligence plc",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "NIQ Global Intelligence plc",
+    "source": "scan-auto"
+  },
+  "NTR": {
+    "name": "Nutrien Ltd.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Nutrien Ltd.",
+    "source": "scan-auto"
+  },
+  "NVDL": {
+    "name": "GraniteShares 2x Long NVDA Dail",
+    "type": "etf",
+    "exchange": "NGM",
+    "longname": "GraniteShares 2x Long NVDA Daily ETF",
+    "source": "scan-auto"
+  },
+  "NVO": {
+    "name": "Novo Nordisk A/S",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Novo Nordisk A/S",
+    "source": "scan-auto"
+  },
+  "NXT": {
+    "name": "Nextpower Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Nextpower Inc.",
+    "source": "scan-auto"
+  },
+  "OKLO": {
+    "name": "Oklo Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Oklo Inc.",
+    "source": "scan-auto"
+  },
+  "ONON": {
+    "name": "On Holding AG",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "On Holding AG",
+    "source": "scan-auto"
+  },
+  "OPAL": {
+    "name": "OPAL Fuels Inc.",
+    "type": "equity",
+    "exchange": "NCM",
+    "longname": "OPAL Fuels Inc.",
+    "source": "scan-auto"
+  },
+  "OVV": {
+    "name": "Ovintiv Inc. (DE)",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Ovintiv Inc.",
+    "source": "scan-auto"
+  },
+  "PL": {
+    "name": "Planet Labs PBC",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Planet Labs PBC",
+    "source": "scan-auto"
+  },
+  "PLGO": {
+    "name": "Pelagos Insurance Capital Limit",
+    "type": "equity",
+    "exchange": "NYQ",
+    "source": "scan-auto"
+  },
+  "PLNT": {
+    "name": "Planet Fitness, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Planet Fitness, Inc.",
+    "source": "scan-auto"
+  },
+  "PLUG": {
+    "name": "Plug Power, Inc.",
+    "type": "equity",
+    "exchange": "NCM",
+    "longname": "Plug Power Inc.",
+    "source": "scan-auto"
+  },
+  "PLUS": {
+    "name": "ePlus inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "ePlus inc.",
+    "source": "scan-auto"
+  },
+  "PRF": {
+    "name": "Invesco RAFI US 1000 ETF",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Invesco RAFI US 1000 ETF",
+    "source": "scan-auto"
+  },
+  "PRFZ": {
+    "name": "Invesco RAFI US 1500 Small-Mid ",
+    "type": "etf",
+    "exchange": "NGM",
+    "longname": "Invesco RAFI US 1500 Small-Mid ETF",
+    "source": "scan-auto"
+  },
+  "PRLB": {
+    "name": "Proto Labs, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Proto Labs, Inc.",
+    "source": "scan-auto"
+  },
+  "PTON": {
+    "name": "Peloton Interactive, Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Peloton Interactive, Inc.",
+    "source": "scan-auto"
+  },
+  "QQQ": {
+    "name": "Invesco QQQ Trust, Series 1",
+    "type": "etf",
+    "exchange": "NGM",
+    "longname": "Invesco QQQ Trust",
+    "source": "scan-auto"
+  },
+  "QQQM": {
+    "name": "Invesco NASDAQ 100 ETF",
+    "type": "etf",
+    "exchange": "NGM",
+    "longname": "Invesco NASDAQ 100 ETF",
+    "source": "scan-auto"
+  },
+  "RBC": {
+    "name": "RBC Bearings Incorporated",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "RBC Bearings Incorporated",
+    "source": "scan-auto"
+  },
+  "REX": {
+    "name": "REX American Resources Corporat",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "REX American Resources Corporation",
+    "source": "scan-auto"
+  },
+  "RGTI": {
+    "name": "Rigetti Computing, Inc.",
+    "type": "equity",
+    "exchange": "NCM",
+    "longname": "Rigetti Computing, Inc.",
+    "source": "scan-auto"
+  },
+  "ROC": {
+    "name": "Rank One Computing Corporation",
+    "type": "equity",
+    "exchange": "NCM",
+    "longname": "Rank One Computing Corporation",
+    "source": "scan-auto"
+  },
+  "ROG": {
+    "name": "Rogers Corporation",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Rogers Corporation",
+    "source": "scan-auto"
+  },
+  "RPAR": {
+    "name": "RPAR Risk Parity ETF",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "RPAR Risk Parity ETF",
+    "source": "scan-auto"
+  },
+  "RSP": {
+    "name": "Invesco S&P 500 Equal Weight ET",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Invesco S&P 500 Equal Weight ETF",
+    "source": "scan-auto"
+  },
+  "SABA": {
+    "name": "Saba Capital Income & Opportunities Fund II",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Saba Capital Income & Opportunities Fund II",
+    "source": "scan-auto"
+  },
+  "SCHA": {
+    "name": "Schwab U.S. Small-Cap ETF",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Schwab U.S. Small-Cap ETF",
+    "source": "scan-auto"
+  },
+  "SCHD": {
+    "name": "Schwab US Dividend Equity ETF",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Schwab U.S. Dividend Equity ETF",
+    "source": "scan-auto"
+  },
+  "SCHG": {
+    "name": "Schwab U.S. Large-Cap Growth ET",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Schwab U.S. Large-Cap Growth ETF",
+    "source": "scan-auto"
+  },
+  "SCHI": {
+    "name": "Schwab 5-10 Year Corporate Bond",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Schwab 5-10 Year Corporate Bond ETF",
+    "source": "scan-auto"
+  },
+  "SCHX": {
+    "name": "Schwab U.S. Large-Cap ETF",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Schwab U.S. Large-Cap ETF",
+    "source": "scan-auto"
+  },
+  "SEI": {
+    "name": "Solaris Energy Infrastructure, ",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Solaris Energy Infrastructure, Inc.",
+    "source": "scan-auto"
+  },
+  "SFTBY": {
+    "name": "Softbank Group Corp",
+    "type": "equity",
+    "exchange": "PNK",
+    "longname": "SoftBank Group Corp.",
+    "source": "scan-auto"
+  },
+  "SGML": {
+    "name": "Sigma Lithium Corporation",
+    "type": "equity",
+    "exchange": "NCM",
+    "longname": "Sigma Lithium Corporation",
+    "source": "scan-auto"
+  },
+  "SOFI": {
+    "name": "SoFi Technologies, Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "SoFi Technologies, Inc.",
+    "source": "scan-auto"
+  },
+  "SON": {
+    "name": "Sonoco Products Company",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Sonoco Products Company",
+    "source": "scan-auto"
+  },
+  "SOXL": {
+    "name": "Direxion Daily Semiconductor Bu",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Direxion Daily Semiconductor Bull 3X Shares",
+    "source": "scan-auto"
+  },
+  "SOXS": {
+    "name": "Direxion Daily Semiconductor Be",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Direxion Daily Semiconductor Bear 3X Shares",
+    "source": "scan-auto"
+  },
+  "SOXX": {
+    "name": "iShares PHLX SOX Semiconductor ",
+    "type": "etf",
+    "exchange": "NGM",
+    "longname": "iShares Semiconductor ETF",
+    "source": "scan-auto"
+  },
+  "SPG": {
+    "name": "Simon Property Group, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Simon Property Group, Inc.",
+    "source": "scan-auto"
+  },
+  "SWAN": {
+    "name": "Amplify BlackSwan Growth & Trea",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Amplify BlackSwan Growth & Treasury Core ETF",
+    "source": "scan-auto"
+  },
+  "SWP": {
+    "name": "SWP Growth & Income ETF",
+    "type": "etf",
+    "exchange": "NGM",
+    "source": "scan-auto"
+  },
+  "TAK": {
+    "name": "Takeda Pharmaceutical Company L",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Takeda Pharmaceutical Company Limited",
+    "source": "scan-auto"
+  },
+  "TME": {
+    "name": "Tencent Music Entertainment Gro",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Tencent Music Entertainment Group",
+    "source": "scan-auto"
+  },
+  "TSEM": {
+    "name": "Tower Semiconductor Ltd.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Tower Semiconductor Ltd.",
+    "source": "scan-auto"
+  },
+  "TSN": {
+    "name": "Tyson Foods, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Tyson Foods, Inc.",
+    "source": "scan-auto"
+  },
+  "TTEK": {
+    "name": "Tetra Tech, Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Tetra Tech, Inc.",
+    "source": "scan-auto"
+  },
+  "UBS": {
+    "name": "UBS Group AG Registered",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "UBS Group AG",
+    "source": "scan-auto"
+  },
+  "UPS": {
+    "name": "United Parcel Service, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "United Parcel Service, Inc.",
+    "source": "scan-auto"
+  },
+  "USAR": {
+    "name": "USA Rare Earth, Inc.",
+    "type": "equity",
+    "exchange": "NGM",
+    "longname": "USA Rare Earth, Inc.",
+    "source": "scan-auto"
+  },
+  "VG": {
+    "name": "Venture Global, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Venture Global, Inc.",
+    "source": "scan-auto"
+  },
+  "VIK": {
+    "name": "Viking Holdings Ltd",
+    "type": "equity",
+    "exchange": "NYQ",
+    "source": "scan-auto"
+  },
+  "VOO": {
+    "name": "Vanguard S&P 500 ETF",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Vanguard S&P 500 ETF",
+    "source": "scan-auto"
+  },
+  "VOYA": {
+    "name": "Voya Financial, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "Voya Financial, Inc.",
+    "source": "scan-auto"
+  },
+  "VSNT": {
+    "name": "Versant Media Group, Inc.",
+    "type": "equity",
+    "exchange": "NMS",
+    "longname": "Versant Media Group, Inc.",
+    "source": "scan-auto"
+  },
+  "WBI": {
+    "name": "WaterBridge Infrastructure LLC",
+    "type": "equity",
+    "exchange": "NYQ",
+    "source": "scan-auto"
+  },
+  "WEBS": {
+    "name": "Direxion Daily Dow Jones Intern",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "Direxion Daily Dow Jones Internet Bear 3X Shares",
+    "source": "scan-auto"
+  },
+  "WFCF": {
+    "name": "Where Food Comes From, Inc.",
+    "type": "equity",
+    "exchange": "NCM",
+    "longname": "Where Food Comes From, Inc.",
+    "source": "scan-auto"
+  },
+  "XLE": {
+    "name": "State Street Energy Select Sect",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "State Street Energy Select Sector SPDR ETF",
+    "source": "scan-auto"
+  },
+  "XLK": {
+    "name": "State Street Technology Select ",
+    "type": "etf",
+    "exchange": "PCX",
+    "longname": "State Street Technology Select Sector SPDR ETF",
+    "source": "scan-auto"
+  },
+  "YETI": {
+    "name": "YETI Holdings, Inc.",
+    "type": "equity",
+    "exchange": "NYQ",
+    "longname": "YETI Holdings, Inc.",
+    "source": "scan-auto"
+  },
+  "^DJI": {
+    "name": "Dow Jones Industrial Average",
+    "type": "index",
+    "exchange": "DJI",
+    "longname": "Dow Jones Industrial Average",
+    "source": "scan-auto"
+  },
+  "^GSPC": {
+    "name": "S&P 500",
+    "type": "index",
+    "exchange": "SNP",
+    "longname": "S&P 500",
+    "source": "scan-auto"
+  },
+  "^IXIC": {
+    "name": "NASDAQ Composite",
+    "type": "index",
+    "exchange": "NIM",
+    "longname": "NASDAQ Composite",
+    "source": "scan-auto"
+  },
+  "^TNX": {
+    "name": "CBOE Interest Rate 10 Year T No",
+    "type": "index",
+    "exchange": "CGI",
+    "longname": "CBOE Interest Rate 10 Year T No",
+    "source": "scan-auto"
+  }
+}

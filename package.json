@@ -13,7 +13,8 @@
     "split-models": "tsx src/core/modelLoader.ts",
     "test": "vitest run",
     "test:watch": "vitest",
-    "download-model": "node scripts/download-model.js"
+    "download-model": "node scripts/download-model.js",
+    "chat": "NODE_OPTIONS='--max-http-header-size=131072' node scripts/chat.js"
   },
   "keywords": [
     "tui",

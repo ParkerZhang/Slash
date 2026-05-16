@@ -1,16 +1,28 @@
 {
   "commands": [
-    "/load missing missing.csv",
-    "/ai analyze missing \"which groups dominant in the file, 2 groups\"",
+    "/diff f1 f2",
     "/load f1 Sample_Request.csv",
-    "/preview f1"
+    "/load f2 Sample_Respone.csv",
+    "/keyfield f1",
+    "/keyfield f2",
+    "/diff f1 f2",
+    "/preview f1",
+    "/preview f1",
+    "/diff f1 f2",
+    "/diff f1 f2"
   ],
   "loadedFiles": [
     {
       "id": "f1",
-      "name": "Sample_Request.csv",
-      "keyField": "isin",
-      "fileFormat": "csv"
+      "name": "data/elasticSearchResult.json",
+      "keyField": "name",
+      "fileFormat": "json"
+    },
+    {
+      "id": "f2",
+      "name": "data/elasticSearchResult_2.json",
+      "keyField": "name",
+      "fileFormat": "json"
     },
     {
       "id": "request",
@@ -21,30 +33,7 @@
       "id": "response",
       "name": "SecurityPricingResponse.csv",
       "fileFormat": "csv"
-    },
-    {
-      "id": "f2",
-      "name": "data/elasticSearchResult_2.json",
-      "fileFormat": "json"
-    },
-    {
-      "id": "missing",
-      "name": "missing.csv",
-      "keyField": "isin",
-      "fileFormat": "csv"
-    },
-    {
-      "id": "req",
-      "name": "SecurityPricingRequest.csv",
-      "keyField": "isin",
-      "fileFormat": "csv"
-    },
-    {
-      "id": "resp",
-      "name": "SecurityPricingResponse.csv",
-      "keyField": "isin",
-      "fileFormat": "csv"
     }
   ],
-  "selectedModel": "gemma4:latest"
+  "selectedModel": "gpt-5.4"
 }

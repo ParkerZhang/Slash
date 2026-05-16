@@ -289,7 +289,7 @@ const rl = readline.createInterface({
 });
 
 async function main() {
-  let modelId = ORIG_MODEL;
+  let modelId = fs.existsSync(path.join(MIC_MODEL, 'tokenizer.json')) ? MIC_MODEL : ORIG_MODEL;
 
   async function getEmbedding(text) {
     if (embedCache[modelId]?.[text]) return embedCache[modelId][text];
@@ -703,7 +703,7 @@ async function main() {
           const tmpFile = '/tmp/opencode_new_tokens.json';
           fs.writeFileSync(tmpFile, JSON.stringify(tokens));
           try {
-            const out = cp.execSync(`python3 /tmp/add_mic_tokens.py ${tmpFile}`, { encoding: 'utf8', timeout: 120000 });
+            const out = cp.execSync(`python3 ${path.resolve(__dirname, 'add_mic_tokens.py')} ${tmpFile}`, { encoding: 'utf8', timeout: 120000 });
             console.log(out);
           } catch (e) {
             console.log(`Error: ${e.stderr || e.message}`);

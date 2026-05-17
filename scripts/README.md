@@ -56,6 +56,8 @@ scan <url>         Extract tickers from an article (data-ylk, /quote/ links, voc
                    Auto-saves unknown tickers enriched via Yahoo search API
 page <url>         Fetch article, detect tickers, colorize with live quotes
 page <file>        Same analysis on a local file
+page sample.csv    Resolve sample listings through MIC/root/ISIN links and quote matches
+page samples.csv   Alias for sample.csv
 page all           Analyze all cached news articles
 ```
 
@@ -65,6 +67,50 @@ page all           Analyze all cached news articles
 --mic <cmd>        Expand MIC codes then run cmd
 --mic-model <cmd>  Force MIC model for command
 --orig-model <cmd> Force original model for command
+```
+
+## Full Pipeline
+
+Run these steps in order to rebuild the model, embed identifiers, build the index, verify, and start the chat:
+
+```bash
+# 1. Rebuild MIC model from scratch
+python3 rebuild_mic_model.py
+
+# 2. Sync registry (merges sample.csv + identifiers.json → registry.json)
+python3 sync_registry.py
+
+# 3. Embed all registry identifiers (ISINs, SEDOLs, tickers) into the model
+python3 embed_registry.py
+
+# 4. Pre-compute full-transformer embeddings for all tokens
+python3 build_embed_index.py
+
+# 5. Post-build checks
+python3 connect_identifiers_sample.py
+python3 test_mic_model.py
+python3 verify_accuracy.py
+
+# 6. Launch interactive chat
+npm run chat
+```
+
+Useful smoke tests in the REPL:
+
+```text
+page identifiers.json
+page sample.csv
+quote TSLA
+family classify TSLA
+family classify TLO.GY
+```
+
+Expected connector behavior includes:
+
+```text
+TSLA.AV    -> TSLA (root_ticker)
+TLO.GY     -> TSLA (isin)
+TSLA.UW    -> TSLA (exact_yahoo_ticker)
 ```
 
 ## Architecture

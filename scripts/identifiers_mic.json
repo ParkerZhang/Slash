@@ -1,0 +1,919 @@
+{
+  "AI": [
+    "XNYS",
+    "XNAS"
+  ],
+  "APPS": [
+    "XNAS"
+  ],
+  "DJT": [
+    "XNAS",
+    "XFRA",
+    "XSTU",
+    "XMUN"
+  ],
+  "DLO": [
+    "XNAS",
+    "XFRA",
+    "XMEX"
+  ],
+  "ENPH": [
+    "XNAS"
+  ],
+  "FIG": [
+    "XNYS",
+    "XNAS"
+  ],
+  "GOLF": [
+    "XNYS",
+    "XSTU",
+    "XFRA",
+    "XMUN"
+  ],
+  "HELP": [
+    "XNAS",
+    "XNEO"
+  ],
+  "INTC": [
+    "XNAS",
+    "XMIL",
+    "XNEO",
+    "XFRA",
+    "XHKG",
+    "XBUE",
+    "XSGO"
+  ],
+  "IPOS": [
+    "XASE"
+  ],
+  "LIFE": [
+    "XNAS"
+  ],
+  "META": [
+    "XNAS"
+  ],
+  "MICC": [
+    "XNYS",
+    "XAMS",
+    "XFRA",
+    "XLON"
+  ],
+  "MSFT": [
+    "XNAS",
+    "XMEX",
+    "XMIL",
+    "XTSE"
+  ],
+  "NOK": [
+    "XNYS",
+    "XHEL",
+    "XFRA",
+    "XWBO",
+    "XLON",
+    "XSTO",
+    "XOTC"
+  ],
+  "NU": [
+    "XNYS",
+    "XFRA",
+    "XBSP",
+    "XBUE",
+    "XSTU",
+    "XMUN",
+    "XHAM"
+  ],
+  "NVDA": [
+    "XNAS",
+    "XFRA",
+    "XBUE",
+    "XMEX",
+    "XMIL"
+  ],
+  "ODDS": [
+    "XNAS",
+    "XSTU"
+  ],
+  "ONDS": [
+    "XNAS",
+    "XFRA",
+    "XMIL",
+    "XSTU",
+    "XMUN",
+    "XHAM"
+  ],
+  "PC": [
+    "XNAS"
+  ],
+  "PETS": [
+    "XNAS"
+  ],
+  "POET": [
+    "XNAS",
+    "XFRA",
+    "XMUN",
+    "XSTU",
+    "XHAM"
+  ],
+  "SEDG": [
+    "XNAS"
+  ],
+  "SOC": [
+    "XMIL",
+    "XNYS",
+    "XFRA",
+    "XHAM"
+  ],
+  "SPY": [
+    "XASE",
+    "XMEX",
+    "XTKS",
+    "XSES"
+  ],
+  "TECH": [
+    "XNAS",
+    "XBSP",
+    "XFRA"
+  ],
+  "TM": [
+    "XNYS",
+    "XTKS",
+    "XOTC",
+    "XWBO",
+    "XSTU",
+    "XASE",
+    "XBUE"
+  ],
+  "TNGX": [
+    "XNAS"
+  ],
+  "TSLA": [
+    "XNAS"
+  ],
+  "TV": [
+    "XNYS"
+  ],
+  "UK": [
+    "XNAS"
+  ],
+  "ULTA": [
+    "XNAS"
+  ],
+  "UNH": [
+    "XNYS",
+    "XSGO",
+    "XMIL",
+    "XBSP",
+    "XFRA",
+    "XBUE"
+  ],
+  "USAS": [
+    "XASE",
+    "XTSE",
+    "XFRA"
+  ],
+  "XBOX": [
+    "XBOS"
+  ],
+  "YSS": [
+    "XNYS"
+  ],
+  "AAPL": [
+    "XNAS",
+    "XFRA",
+    "XMEX",
+    "XNEO",
+    "XBUE"
+  ],
+  "ACV": [
+    "XNYS",
+    "XNAS"
+  ],
+  "AKRE": [
+    "XASE"
+  ],
+  "ALPS": [
+    "XNAS"
+  ],
+  "AMAT": [
+    "XNAS"
+  ],
+  "AMS": [
+    "XASE"
+  ],
+  "AMZN": [
+    "XNAS"
+  ],
+  "ARM": [
+    "XNAS",
+    "XMEX",
+    "XASE",
+    "XBUE",
+    "XSTU",
+    "XFRA"
+  ],
+  "ARMK": [
+    "XNYS",
+    "XFRA",
+    "XLON",
+    "XSTU"
+  ],
+  "ASTS": [
+    "XNAS"
+  ],
+  "AURA": [
+    "XNAS"
+  ],
+  "AVOS": [
+    "XNAS"
+  ],
+  "B": [
+    "XNYS",
+    "XTSE",
+    "XBUE",
+    "XLON",
+    "XFRA"
+  ],
+  "BA": [
+    "XNYS",
+    "XFRA",
+    "XNEO",
+    "XBSP",
+    "XLON",
+    "XMIL"
+  ],
+  "BABA": [
+    "XNYS",
+    "XHKG",
+    "XMEX",
+    "XOTC",
+    "XFRA",
+    "XWBO"
+  ],
+  "BBH": [
+    "XNAS",
+    "XMUN"
+  ],
+  "BIRK": [
+    "XNYS",
+    "XFRA",
+    "XHAM",
+    "XSTU",
+    "XMUN"
+  ],
+  "BMO": [
+    "XTSE",
+    "XNYS",
+    "XLON",
+    "XSTU",
+    "XNAS",
+    "XMEX"
+  ],
+  "BN": [
+    "XNYS",
+    "XTSE",
+    "XFRA",
+    "XOTC"
+  ],
+  "BNKK": [
+    "XNAS"
+  ],
+  "BTDR": [
+    "XNAS",
+    "XFRA",
+    "XMUN",
+    "XSTU",
+    "XHAM"
+  ],
+  "CAT": [
+    "XNYS",
+    "XBUE",
+    "XMEX",
+    "XSGO",
+    "XFRA",
+    "XMUN",
+    "XNEO"
+  ],
+  "CBRS": [
+    "XNAS"
+  ],
+  "CCM": [
+    "XNYS"
+  ],
+  "CECO": [
+    "XNAS",
+    "XFRA",
+    "XMUN",
+    "XSTU"
+  ],
+  "CEG": [
+    "XNAS",
+    "XMEX",
+    "XFRA",
+    "XBUE",
+    "XBKK"
+  ],
+  "CF": [
+    "XNYS",
+    "XNAS"
+  ],
+  "CICC": [
+    "XNYS",
+    "XNAS"
+  ],
+  "CLS": [
+    "XNYS",
+    "XTSE",
+    "XFRA",
+    "XNEO",
+    "XMUN",
+    "XSTU",
+    "XBUE"
+  ],
+  "CRCL": [
+    "XNYS",
+    "XFRA",
+    "XMIL",
+    "XHAM",
+    "XMEX"
+  ],
+  "CRM": [
+    "XNYS",
+    "XNAS"
+  ],
+  "CRMD": [
+    "XNAS",
+    "XFRA",
+    "XSTU",
+    "XMUN",
+    "XHAM"
+  ],
+  "CSCO": [
+    "XNAS"
+  ],
+  "CSIQ": [
+    "XNAS",
+    "XLON",
+    "XMEX",
+    "XFRA",
+    "XSTU",
+    "XMUN"
+  ],
+  "DAC": [
+    "XNYS",
+    "XFRA"
+  ],
+  "DANA": [
+    "XASE"
+  ],
+  "DB": [
+    "XNYS",
+    "XFRA",
+    "XWBO",
+    "XMEX",
+    "XBSP"
+  ],
+  "DDS": [
+    "XNYS",
+    "XNAS"
+  ],
+  "DIA": [
+    "XASE",
+    "XAMS",
+    "XSES",
+    "XMEX"
+  ],
+  "DRAM": [
+    "XBOS"
+  ],
+  "DT": [
+    "XNYS",
+    "XNAS"
+  ],
+  "ECO": [
+    "XNYS",
+    "XOSL",
+    "XMUN",
+    "XFRA",
+    "XSTU"
+  ],
+  "ELM": [
+    "XASE"
+  ],
+  "ELWT": [
+    "XNAS"
+  ],
+  "EMQQ": [
+    "XASE"
+  ],
+  "EPAM": [
+    "XNYS",
+    "XNAS"
+  ],
+  "FENC": [
+    "XNAS",
+    "XFRA",
+    "XTSE",
+    "XMUN",
+    "XSTU",
+    "XNEO"
+  ],
+  "FMQQ": [
+    "XASE"
+  ],
+  "FNDA": [
+    "XASE"
+  ],
+  "FNDX": [
+    "XASE"
+  ],
+  "FOX": [
+    "XNAS",
+    "XFRA",
+    "XMEX",
+    "XMUN"
+  ],
+  "FPA": [
+    "XNAS"
+  ],
+  "FPS": [
+    "XNYS",
+    "XNAS"
+  ],
+  "FRMI": [
+    "XNAS",
+    "XLON",
+    "XFRA",
+    "XHAM",
+    "XMUN",
+    "XSTU"
+  ],
+  "GGM": [
+    "XASE"
+  ],
+  "GNE": [
+    "XNYS",
+    "XLON",
+    "XFRA",
+    "XSTU"
+  ],
+  "GOOS": [
+    "XNYS",
+    "XTSE",
+    "XMUN",
+    "XFRA",
+    "XSTU",
+    "XLON"
+  ],
+  "GRO": [
+    "XASE"
+  ],
+  "GS": [
+    "XNYS",
+    "XNAS"
+  ],
+  "GURU": [
+    "XASE"
+  ],
+  "HCM": [
+    "XNAS",
+    "XFRA",
+    "XOTC",
+    "XLON",
+    "XHKG"
+  ],
+  "HIMS": [
+    "XNYS",
+    "XNAS"
+  ],
+  "HMC": [
+    "XNYS",
+    "XNAS"
+  ],
+  "HULL": [
+    "XASE",
+    "XBOS"
+  ],
+  "IDX": [
+    "XASE",
+    "XHAM"
+  ],
+  "IMSR": [
+    "XNAS"
+  ],
+  "IMSRW": [
+    "XNAS"
+  ],
+  "IPI": [
+    "XNYS",
+    "XNAS"
+  ],
+  "JD": [
+    "XNAS"
+  ],
+  "KEP": [
+    "XNYS",
+    "XFRA",
+    "XBUE"
+  ],
+  "KGEI": [
+    "XFRA",
+    "XNAS",
+    "XTSE",
+    "XSTU",
+    "XNEO"
+  ],
+  "KLAR": [
+    "XNYS",
+    "XFRA",
+    "XMUN",
+    "XHAM",
+    "XSTU"
+  ],
+  "LEU": [
+    "XNYS",
+    "XSTU",
+    "XFRA",
+    "XMUN",
+    "XHAM"
+  ],
+  "LGN": [
+    "XNAS"
+  ],
+  "LI": [
+    "XNAS",
+    "XFRA",
+    "XHKG",
+    "XHAM",
+    "XSTU"
+  ],
+  "LUCD": [
+    "XNAS"
+  ],
+  "MAN": [
+    "XNYS",
+    "XFRA",
+    "XMUN",
+    "XSTU"
+  ],
+  "MAX": [
+    "XNYS",
+    "XNAS"
+  ],
+  "MC": [
+    "XNYS",
+    "XFRA"
+  ],
+  "MFC": [
+    "XNYS",
+    "XTSE",
+    "XHKG",
+    "XLON"
+  ],
+  "MFG": [
+    "XNYS",
+    "XNAS"
+  ],
+  "MKAM": [
+    "XNAS"
+  ],
+  "MNDY": [
+    "XNAS",
+    "XFRA",
+    "XSTU",
+    "XMUN",
+    "XMEX",
+    "XHAM"
+  ],
+  "MOS": [
+    "XNYS",
+    "XMEX",
+    "XBSP",
+    "XBUE",
+    "XLON",
+    "XFRA"
+  ],
+  "MUFG": [
+    "XNYS",
+    "XNAS"
+  ],
+  "NBIS": [
+    "XNAS",
+    "XFRA",
+    "XMUN",
+    "XSTU",
+    "XMEX",
+    "XBKK"
+  ],
+  "NETL": [
+    "XASE"
+  ],
+  "NGG": [
+    "XNYS",
+    "XLON",
+    "XOTC",
+    "XMUN",
+    "XBSP",
+    "XBUE",
+    "XFRA"
+  ],
+  "NIQ": [
+    "XNYS",
+    "XFRA"
+  ],
+  "NTR": [
+    "XNYS",
+    "XTSE",
+    "XNEO",
+    "XSTU",
+    "XMUN",
+    "XFRA",
+    "XMEX"
+  ],
+  "NVDL": [
+    "XNAS"
+  ],
+  "NVO": [
+    "XNYS",
+    "XCSE",
+    "XFRA",
+    "XHAM",
+    "XLON",
+    "XWBO",
+    "XASE"
+  ],
+  "NXT": [
+    "XNAS",
+    "XMEX"
+  ],
+  "OKLO": [
+    "XNYS",
+    "XMEX",
+    "XBUE"
+  ],
+  "ONON": [
+    "XNYS",
+    "XFRA",
+    "XMIL",
+    "XSTU",
+    "XBKK",
+    "XMUN"
+  ],
+  "OPAL": [
+    "XNAS",
+    "XFRA"
+  ],
+  "OVV": [
+    "XNYS",
+    "XTSE",
+    "XMUN",
+    "XSTU",
+    "XFRA",
+    "XNEO"
+  ],
+  "PL": [
+    "XNYS",
+    "XMIL",
+    "XFRA",
+    "XSTU",
+    "XHAM"
+  ],
+  "PLGO": [
+    "XNYS",
+    "XFRA"
+  ],
+  "PLNT": [
+    "XNYS",
+    "XNAS"
+  ],
+  "PLUG": [
+    "XNAS",
+    "XMIL",
+    "XFRA",
+    "XMUN",
+    "XLON"
+  ],
+  "PLUS": [
+    "XNAS",
+    "XSTU",
+    "XFRA",
+    "XMUN"
+  ],
+  "PRF": [
+    "XASE",
+    "XMEX"
+  ],
+  "PRFZ": [
+    "XNAS"
+  ],
+  "PRLB": [
+    "XNYS",
+    "XNAS"
+  ],
+  "PTON": [
+    "XNAS"
+  ],
+  "QQQ": [
+    "XNAS",
+    "XHKG",
+    "XLON",
+    "XMEX",
+    "XBUE"
+  ],
+  "QQQM": [
+    "XNAS",
+    "XMEX"
+  ],
+  "RBC": [
+    "XNYS",
+    "XFRA"
+  ],
+  "REX": [
+    "XNYS",
+    "XFRA"
+  ],
+  "RGTI": [
+    "XNAS"
+  ],
+  "ROC": [
+    "XNAS"
+  ],
+  "ROG": [
+    "XNYS",
+    "XFRA"
+  ],
+  "RPAR": [
+    "XASE"
+  ],
+  "RSP": [
+    "XASE",
+    "XMEX"
+  ],
+  "SABA": [
+    "XNYS"
+  ],
+  "SCHA": [
+    "XASE"
+  ],
+  "SCHD": [
+    "XASE"
+  ],
+  "SCHG": [
+    "XASE"
+  ],
+  "SCHI": [
+    "XASE"
+  ],
+  "SCHX": [
+    "XASE"
+  ],
+  "SEI": [
+    "XNYS",
+    "XNAS"
+  ],
+  "SFTBY": [
+    "XOTC",
+    "XTKS",
+    "XSTU",
+    "XFRA",
+    "XWBO"
+  ],
+  "SGML": [
+    "XNAS",
+    "XVAN",
+    "XBSP",
+    "XFRA"
+  ],
+  "SOFI": [
+    "XNAS"
+  ],
+  "SON": [
+    "XNYS",
+    "XFRA"
+  ],
+  "SOXL": [
+    "XASE",
+    "XMEX"
+  ],
+  "SOXS": [
+    "XASE",
+    "XMEX"
+  ],
+  "SOXX": [
+    "XNAS",
+    "XMEX",
+    "XBSP"
+  ],
+  "SPG": [
+    "XNYS",
+    "XNAS"
+  ],
+  "SWAN": [
+    "XASE"
+  ],
+  "SWP": [
+    "XNAS"
+  ],
+  "TAK": [
+    "XNYS",
+    "XFRA",
+    "XOTC",
+    "XBSP",
+    "XLON",
+    "XWBO"
+  ],
+  "TME": [
+    "XNYS",
+    "XHKG",
+    "XMEX",
+    "XMUN",
+    "XFRA",
+    "XSTU",
+    "XLON"
+  ],
+  "TSEM": [
+    "XNAS",
+    "XMUN",
+    "XSTU",
+    "XFRA",
+    "XHAM"
+  ],
+  "TSN": [
+    "XNYS",
+    "XNAS"
+  ],
+  "TTEK": [
+    "XNYS",
+    "XNAS"
+  ],
+  "UBS": [
+    "XNYS",
+    "XFRA",
+    "XSTU",
+    "XLON",
+    "XMEX"
+  ],
+  "UPS": [
+    "XNYS",
+    "XNAS"
+  ],
+  "USAR": [
+    "XNAS"
+  ],
+  "VG": [
+    "XNYS",
+    "XNAS"
+  ],
+  "VIK": [
+    "XNYS",
+    "XFRA",
+    "XMUN"
+  ],
+  "VOO": [
+    "XASE",
+    "XMEX"
+  ],
+  "VOYA": [
+    "XNYS",
+    "XNAS"
+  ],
+  "VSNT": [
+    "XNAS"
+  ],
+  "WBI": [
+    "XNYS"
+  ],
+  "WEBS": [
+    "XASE"
+  ],
+  "WFCF": [
+    "XNAS"
+  ],
+  "XLE": [
+    "XASE",
+    "XMEX"
+  ],
+  "XLK": [
+    "XASE",
+    "XMEX"
+  ],
+  "YETI": [
+    "XNYS",
+    "XNAS"
+  ],
+  "^DJI": [
+    "XNYS",
+    "XASE",
+    "XTSE",
+    "XSTU",
+    "XPAR"
+  ],
+  "^GSPC": [
+    "XCME"
+  ],
+  "^IXIC": [
+    "XNAS"
+  ],
+  "^TNX": [
+    "XCBO"
+  ]
+}

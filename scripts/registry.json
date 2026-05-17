@@ -1,0 +1,2403 @@
+{
+  "entities": {
+    "US86800U3023": {
+      "isin": "US86800U3023",
+      "name": "SUPER MICRO COMPUTER INC",
+      "listings": [
+        {
+          "sedol": "BRC3N73",
+          "ticker": "SMCI_UW",
+          "mic": "XNGS",
+          "yahoo_ticker": "SMCI",
+          "display_name": "SUPER MICRO COMPUTER INC AT NASDAQ GS"
+        },
+        {
+          "sedol": "BLFCV82",
+          "ticker": "MS51_GY",
+          "mic": "XETR",
+          "yahoo_ticker": "MS51.DE",
+          "display_name": "SUPER MICRO COMPUTER INC AT XETRA"
+        }
+      ]
+    },
+    "CA8787422044": {
+      "isin": "CA8787422044",
+      "name": "TECK RESOURCES LTD-CLS B",
+      "listings": [
+        {
+          "sedol": "2124533",
+          "ticker": "TECK.UN",
+          "mic": "XNYS",
+          "yahoo_ticker": "TECK",
+          "display_name": "TECK RESOURCES LTD-CLS B AT NEW YORK"
+        },
+        {
+          "sedol": "2879327",
+          "ticker": "TECK/B.CT",
+          "mic": "XTSE",
+          "yahoo_ticker": "TECK.TO",
+          "display_name": "TECK RESOURCES LTD-CLS B AT TORONTO"
+        }
+      ]
+    },
+    "US88160R1014": {
+      "isin": "US88160R1014",
+      "name": "TESLA INC",
+      "listings": [
+        {
+          "sedol": "BF1SNQ4",
+          "ticker": "TSLA.AV",
+          "mic": "XWBO",
+          "yahoo_ticker": "TSLA.VI",
+          "display_name": "TESLA INC AT AUSTRIAVIENNA"
+        },
+        {
+          "sedol": "B3XFVH6",
+          "ticker": "TLO.GY",
+          "mic": "XETR",
+          "yahoo_ticker": "TLO.DE",
+          "display_name": "TESLA INC AT XETRA"
+        },
+        {
+          "sedol": "B616C79",
+          "ticker": "TSLA.UW",
+          "mic": "XNGS",
+          "yahoo_ticker": "TSLA",
+          "display_name": "TESLA MOTORS INC"
+        }
+      ]
+    },
+    "US8825081040": {
+      "isin": "US8825081040",
+      "name": "TEXAS INSTRUMENTS INC",
+      "listings": [
+        {
+          "sedol": "BF1SNP3",
+          "ticker": "TXN.AV",
+          "mic": "XWBO",
+          "yahoo_ticker": "TXN.VI",
+          "display_name": "TEXAS INSTRUMENTS INC AT AUSTRIAVIENNA"
+        },
+        {
+          "sedol": "2885409",
+          "ticker": "TXN.UW",
+          "mic": "XNGS",
+          "yahoo_ticker": "TXN",
+          "display_name": "TEXAS INSTRUMENTS INC AT NASDAQ GS"
+        },
+        {
+          "sedol": "B0K3NK9",
+          "ticker": "TII.GY",
+          "mic": "XETR",
+          "yahoo_ticker": "TII.DE",
+          "display_name": "TEXAS INSTRUMENTS INC AT XETRA"
+        }
+      ]
+    },
+    "BRTIMSACNOR5": {
+      "isin": "BRTIMSACNOR5",
+      "name": "TIM SA",
+      "listings": [
+        {
+          "sedol": "BN71RB6",
+          "ticker": "TIMS3.BS",
+          "mic": "BVMF",
+          "yahoo_ticker": "TIMS3.SA",
+          "display_name": "TIM SA AT BM FBOVESPA"
+        }
+      ]
+    },
+    "YAHOO_AI": {
+      "name": "C3.ai, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "AI",
+          "mic": "NYQ",
+          "yahoo_ticker": "AI",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_APPS": {
+      "name": "Digital Turbine, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "APPS",
+          "mic": "NCM",
+          "yahoo_ticker": "APPS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_DJT": {
+      "name": "Trump Media & Technology Group ",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "DJT",
+          "mic": "NGM",
+          "yahoo_ticker": "DJT",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_DLO": {
+      "name": "DLocal Limited",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "DLO",
+          "mic": "NMS",
+          "yahoo_ticker": "DLO",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_ENPH": {
+      "name": "Enphase Energy, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "ENPH",
+          "mic": "NGM",
+          "yahoo_ticker": "ENPH",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_FIG": {
+      "name": "Figma Inc",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "FIG",
+          "mic": "NYS",
+          "yahoo_ticker": "FIG",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_GOLF": {
+      "name": "Acushnet Holdings Corp.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "GOLF",
+          "mic": "NYQ",
+          "yahoo_ticker": "GOLF",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_HELP": {
+      "name": "Cybin Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "HELP",
+          "mic": "NGM",
+          "yahoo_ticker": "HELP",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_INTC": {
+      "name": "Intel Corporation",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "INTC",
+          "mic": "NMS",
+          "yahoo_ticker": "INTC",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_IPOS": {
+      "name": "Renaissance Capital Greenwich F",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "IPOS",
+          "mic": "PCX",
+          "yahoo_ticker": "IPOS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_LIFE": {
+      "name": "Ethos Technologies Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "LIFE",
+          "mic": "NMS",
+          "yahoo_ticker": "LIFE",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_META": {
+      "name": "Meta Platforms, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "META",
+          "mic": "NMS",
+          "yahoo_ticker": "META",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_MICC": {
+      "name": "The Magnum Ice Cream Company N.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "MICC",
+          "mic": "NYQ",
+          "yahoo_ticker": "MICC",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_MSFT": {
+      "name": "Microsoft Corporation",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "MSFT",
+          "mic": "NMS",
+          "yahoo_ticker": "MSFT",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_NOK": {
+      "name": "Nokia Corporation Sponsored",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "NOK",
+          "mic": "NYQ",
+          "yahoo_ticker": "NOK",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_NU": {
+      "name": "Nu Holdings Ltd.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "NU",
+          "mic": "NYQ",
+          "yahoo_ticker": "NU",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_NVDA": {
+      "name": "NVIDIA Corporation",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "NVDA",
+          "mic": "NMS",
+          "yahoo_ticker": "NVDA",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_ODDS": {
+      "name": "Pacer BlueStar Digital Entertai",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "ODDS",
+          "mic": "NGM",
+          "yahoo_ticker": "ODDS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_ONDS": {
+      "name": "Ondas Inc",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "ONDS",
+          "mic": "NCM",
+          "yahoo_ticker": "ONDS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_PC": {
+      "name": "Premium Catering (Holdings) Lim",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "PC",
+          "mic": "NCM",
+          "yahoo_ticker": "PC",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_PETS": {
+      "name": "PetMed Express, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "PETS",
+          "mic": "NMS",
+          "yahoo_ticker": "PETS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_POET": {
+      "name": "POET Technologies Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "POET",
+          "mic": "NCM",
+          "yahoo_ticker": "POET",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SEDG": {
+      "name": "SolarEdge Technologies, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SEDG",
+          "mic": "NMS",
+          "yahoo_ticker": "SEDG",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SOC": {
+      "name": "Sable Offshore Corp.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SOC",
+          "mic": "NYQ",
+          "yahoo_ticker": "SOC",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SPY": {
+      "name": "State Street SPDR S&P 500 ETF T",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SPY",
+          "mic": "PCX",
+          "yahoo_ticker": "SPY",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_TECH": {
+      "name": "Bio-Techne Corp",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "TECH",
+          "mic": "NMS",
+          "yahoo_ticker": "TECH",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_TM": {
+      "name": "Toyota Motor Corporation",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "TM",
+          "mic": "NYQ",
+          "yahoo_ticker": "TM",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_TNGX": {
+      "name": "Tango Therapeutics, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "TNGX",
+          "mic": "NGM",
+          "yahoo_ticker": "TNGX",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_TSLA": {
+      "name": "Tesla, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "TSLA",
+          "mic": "NMS",
+          "yahoo_ticker": "TSLA",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_TV": {
+      "name": "Grupo Televisa S.A.B.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "TV",
+          "mic": "NYQ",
+          "yahoo_ticker": "TV",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_UK": {
+      "name": "Ucommune International Ltd",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "UK",
+          "mic": "NCM",
+          "yahoo_ticker": "UK",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_ULTA": {
+      "name": "Ulta Beauty, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "ULTA",
+          "mic": "NMS",
+          "yahoo_ticker": "ULTA",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_UNH": {
+      "name": "UnitedHealth Group Incorporated",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "UNH",
+          "mic": "NYQ",
+          "yahoo_ticker": "UNH",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_USAS": {
+      "name": "Americas Gold and Silver Corpor",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "USAS",
+          "mic": "ASE",
+          "yahoo_ticker": "USAS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_XBOX": {
+      "name": "Roundhill Ultra Short Duration ",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "XBOX",
+          "mic": "BTS",
+          "yahoo_ticker": "XBOX",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_YSS": {
+      "name": "York Space Systems Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "YSS",
+          "mic": "NYQ",
+          "yahoo_ticker": "YSS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_AAPL": {
+      "name": "Apple Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "AAPL",
+          "mic": "NMS",
+          "yahoo_ticker": "AAPL",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_ACV": {
+      "name": "AllianzGI Diversified Income & ",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "ACV",
+          "mic": "NYQ",
+          "yahoo_ticker": "ACV",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_AKRE": {
+      "name": "Akre Focus ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "AKRE",
+          "mic": "PCX",
+          "yahoo_ticker": "AKRE",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_ALPS": {
+      "name": "ALPS Group Inc",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "ALPS",
+          "mic": "NGM",
+          "yahoo_ticker": "ALPS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_AMAT": {
+      "name": "Applied Materials, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "AMAT",
+          "mic": "NMS",
+          "yahoo_ticker": "AMAT",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_AMS": {
+      "name": "American Shared Hospital Servic",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "AMS",
+          "mic": "ASE",
+          "yahoo_ticker": "AMS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_AMZN": {
+      "name": "Amazon.com, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "AMZN",
+          "mic": "NMS",
+          "yahoo_ticker": "AMZN",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_ARM": {
+      "name": "Arm Holdings plc",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "ARM",
+          "mic": "NMS",
+          "yahoo_ticker": "ARM",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_ARMK": {
+      "name": "Aramark",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "ARMK",
+          "mic": "NYQ",
+          "yahoo_ticker": "ARMK",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_ASTS": {
+      "name": "AST SpaceMobile, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "ASTS",
+          "mic": "NMS",
+          "yahoo_ticker": "ASTS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_AURA": {
+      "name": "Aura Biosciences, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "AURA",
+          "mic": "NGM",
+          "yahoo_ticker": "AURA",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_AVOS": {
+      "name": "Avos Global Equities ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "AVOS",
+          "mic": "NGM",
+          "yahoo_ticker": "AVOS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_B": {
+      "name": "Barrick Mining Corporation",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "B",
+          "mic": "NYQ",
+          "yahoo_ticker": "B",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_BA": {
+      "name": "Boeing Company (The)",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "BA",
+          "mic": "NYQ",
+          "yahoo_ticker": "BA",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_BABA": {
+      "name": "Alibaba Group Holding Limited",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "BABA",
+          "mic": "NYQ",
+          "yahoo_ticker": "BABA",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_BBH": {
+      "name": "VanEck Biotech ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "BBH",
+          "mic": "NGM",
+          "yahoo_ticker": "BBH",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_BIRK": {
+      "name": "Birkenstock Holding plc",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "BIRK",
+          "mic": "NYQ",
+          "yahoo_ticker": "BIRK",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_BMO": {
+      "name": "Bank Of Montreal",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "BMO",
+          "mic": "NYQ",
+          "yahoo_ticker": "BMO",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_BN": {
+      "name": "Brookfield Corporation",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "BN",
+          "mic": "NYQ",
+          "yahoo_ticker": "BN",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_BNKK": {
+      "name": "Bonk, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "BNKK",
+          "mic": "NCM",
+          "yahoo_ticker": "BNKK",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_BTDR": {
+      "name": "Bitdeer Technologies Group",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "BTDR",
+          "mic": "NCM",
+          "yahoo_ticker": "BTDR",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_CAT": {
+      "name": "Caterpillar, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "CAT",
+          "mic": "NYQ",
+          "yahoo_ticker": "CAT",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_CBRS": {
+      "name": "Cerebras Systems Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "CBRS",
+          "mic": "NMS",
+          "yahoo_ticker": "CBRS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_CCM": {
+      "name": "Concord Medical Services Holdin",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "CCM",
+          "mic": "NYQ",
+          "yahoo_ticker": "CCM",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_CECO": {
+      "name": "CECO Environmental Corp.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "CECO",
+          "mic": "NMS",
+          "yahoo_ticker": "CECO",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_CEG": {
+      "name": "Constellation Energy Corporatio",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "CEG",
+          "mic": "NMS",
+          "yahoo_ticker": "CEG",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_CF": {
+      "name": "CF Industries Holdings, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "CF",
+          "mic": "NYQ",
+          "yahoo_ticker": "CF",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_CICC": {
+      "name": "China Internet Cafe Holdings Group, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "CICC",
+          "mic": "NYQ",
+          "yahoo_ticker": "CICC",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_CLS": {
+      "name": "Celestica, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "CLS",
+          "mic": "NYQ",
+          "yahoo_ticker": "CLS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_CRCL": {
+      "name": "Circle Internet Group, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "CRCL",
+          "mic": "NYQ",
+          "yahoo_ticker": "CRCL",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_CRM": {
+      "name": "Salesforce, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "CRM",
+          "mic": "NYQ",
+          "yahoo_ticker": "CRM",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_CRMD": {
+      "name": "CorMedix Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "CRMD",
+          "mic": "NGM",
+          "yahoo_ticker": "CRMD",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_CSCO": {
+      "name": "Cisco Systems, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "CSCO",
+          "mic": "NMS",
+          "yahoo_ticker": "CSCO",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_CSIQ": {
+      "name": "Canadian Solar Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "CSIQ",
+          "mic": "NMS",
+          "yahoo_ticker": "CSIQ",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_DAC": {
+      "name": "Danaos Corporation",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "DAC",
+          "mic": "NYQ",
+          "yahoo_ticker": "DAC",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_DANA": {
+      "name": "Dana Limited Volatility ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "DANA",
+          "mic": "PCX",
+          "yahoo_ticker": "DANA",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_DB": {
+      "name": "Deutsche Bank AG",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "DB",
+          "mic": "NYQ",
+          "yahoo_ticker": "DB",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_DDS": {
+      "name": "Dillard's, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "DDS",
+          "mic": "NYQ",
+          "yahoo_ticker": "DDS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_DIA": {
+      "name": "State Street SPDR Dow Jones Ind",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "DIA",
+          "mic": "PCX",
+          "yahoo_ticker": "DIA",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_DRAM": {
+      "name": "Roundhill Memory ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "DRAM",
+          "mic": "BTS",
+          "yahoo_ticker": "DRAM",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_DT": {
+      "name": "Dynatrace, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "DT",
+          "mic": "NYQ",
+          "yahoo_ticker": "DT",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_ECO": {
+      "name": "Okeanis Eco Tankers Corp.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "ECO",
+          "mic": "NYQ",
+          "yahoo_ticker": "ECO",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_ELM": {
+      "name": "Elm Market Navigator ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "ELM",
+          "mic": "PCX",
+          "yahoo_ticker": "ELM",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_ELWT": {
+      "name": "Elauwit Connection, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "ELWT",
+          "mic": "NCM",
+          "yahoo_ticker": "ELWT",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_EMQQ": {
+      "name": "EMQQ The Emerging Markets Inter",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "EMQQ",
+          "mic": "PCX",
+          "yahoo_ticker": "EMQQ",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_EPAM": {
+      "name": "EPAM Systems, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "EPAM",
+          "mic": "NYQ",
+          "yahoo_ticker": "EPAM",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_FENC": {
+      "name": "Fennec Pharmaceuticals Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "FENC",
+          "mic": "NCM",
+          "yahoo_ticker": "FENC",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_FMQQ": {
+      "name": "FMQQ The Next Frontier Internet",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "FMQQ",
+          "mic": "PCX",
+          "yahoo_ticker": "FMQQ",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_FNDA": {
+      "name": "Schwab Fundamental U.S. Small C",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "FNDA",
+          "mic": "PCX",
+          "yahoo_ticker": "FNDA",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_FNDX": {
+      "name": "Schwab Fundamental U.S. Large C",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "FNDX",
+          "mic": "PCX",
+          "yahoo_ticker": "FNDX",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_FOX": {
+      "name": "Fox Corp",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "FOX",
+          "mic": "NAS",
+          "yahoo_ticker": "FOX",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_FPA": {
+      "name": "First Trust Asia Pacific Ex-Jap",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "FPA",
+          "mic": "NGM",
+          "yahoo_ticker": "FPA",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_FPS": {
+      "name": "Forgent Power Solutions, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "FPS",
+          "mic": "NYQ",
+          "yahoo_ticker": "FPS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_FRMI": {
+      "name": "Fermi Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "FRMI",
+          "mic": "NMS",
+          "yahoo_ticker": "FRMI",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_GGM": {
+      "name": "GGM Macro Alignment ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "GGM",
+          "mic": "PCX",
+          "yahoo_ticker": "GGM",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_GNE": {
+      "name": "Genie Energy Ltd.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "GNE",
+          "mic": "NYQ",
+          "yahoo_ticker": "GNE",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_GOOS": {
+      "name": "Canada Goose Holdings Inc. Subo",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "GOOS",
+          "mic": "NYQ",
+          "yahoo_ticker": "GOOS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_GRO": {
+      "name": "Brazil Potash Corp.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "GRO",
+          "mic": "ASE",
+          "yahoo_ticker": "GRO",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_GS": {
+      "name": "Goldman Sachs Group, Inc. (The)",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "GS",
+          "mic": "NYQ",
+          "yahoo_ticker": "GS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_GURU": {
+      "name": "Global X Guru Index ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "GURU",
+          "mic": "PCX",
+          "yahoo_ticker": "GURU",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_HCM": {
+      "name": "HUTCHMED (China) Limited",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "HCM",
+          "mic": "NMS",
+          "yahoo_ticker": "HCM",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_HIMS": {
+      "name": "Hims & Hers Health, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "HIMS",
+          "mic": "NYQ",
+          "yahoo_ticker": "HIMS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_HMC": {
+      "name": "Honda Motor Company, Ltd.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "HMC",
+          "mic": "NYQ",
+          "yahoo_ticker": "HMC",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_HULL": {
+      "name": "HULL",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "HULL",
+          "mic": "ASE",
+          "yahoo_ticker": "HULL",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_IDX": {
+      "name": "VanEck Indonesia Index ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "IDX",
+          "mic": "PCX",
+          "yahoo_ticker": "IDX",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_IMSR": {
+      "name": "Terrestrial Energy Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "IMSR",
+          "mic": "NMS",
+          "yahoo_ticker": "IMSR",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_IMSRW": {
+      "name": "Terrestrial Energy Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "IMSRW",
+          "mic": "NMS",
+          "yahoo_ticker": "IMSRW",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_IPI": {
+      "name": "Intrepid Potash, Inc",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "IPI",
+          "mic": "NYQ",
+          "yahoo_ticker": "IPI",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_JD": {
+      "name": "JD.com, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "JD",
+          "mic": "NMS",
+          "yahoo_ticker": "JD",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_KEP": {
+      "name": "Korea Electric Power Corporatio",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "KEP",
+          "mic": "NYQ",
+          "yahoo_ticker": "KEP",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_KGEI": {
+      "name": "Kolibri Global Energy Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "KGEI",
+          "mic": "NCM",
+          "yahoo_ticker": "KGEI",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_KLAR": {
+      "name": "Klarna Group plc",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "KLAR",
+          "mic": "NYQ",
+          "yahoo_ticker": "KLAR",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_LEU": {
+      "name": "Centrus Energy Corp.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "LEU",
+          "mic": "NYQ",
+          "yahoo_ticker": "LEU",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_LGN": {
+      "name": "Legence Corp.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "LGN",
+          "mic": "NMS",
+          "yahoo_ticker": "LGN",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_LI": {
+      "name": "Li Auto Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "LI",
+          "mic": "NMS",
+          "yahoo_ticker": "LI",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_LUCD": {
+      "name": "Lucid Diagnostics Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "LUCD",
+          "mic": "NCM",
+          "yahoo_ticker": "LUCD",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_MAN": {
+      "name": "ManpowerGroup",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "MAN",
+          "mic": "NYQ",
+          "yahoo_ticker": "MAN",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_MAX": {
+      "name": "MediaAlpha, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "MAX",
+          "mic": "NYQ",
+          "yahoo_ticker": "MAX",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_MC": {
+      "name": "Moelis & Company",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "MC",
+          "mic": "NYQ",
+          "yahoo_ticker": "MC",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_MFC": {
+      "name": "Manulife Financial Corporation",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "MFC",
+          "mic": "NYQ",
+          "yahoo_ticker": "MFC",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_MFG": {
+      "name": "Mizuho Financial Group, Inc. Sp",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "MFG",
+          "mic": "NYQ",
+          "yahoo_ticker": "MFG",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_MKAM": {
+      "name": "MKAM ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "MKAM",
+          "mic": "NGM",
+          "yahoo_ticker": "MKAM",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_MNDY": {
+      "name": "monday.com Ltd.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "MNDY",
+          "mic": "NMS",
+          "yahoo_ticker": "MNDY",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_MOS": {
+      "name": "Mosaic Company (The)",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "MOS",
+          "mic": "NYQ",
+          "yahoo_ticker": "MOS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_MUFG": {
+      "name": "Mitsubishi UFJ Financial Group,",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "MUFG",
+          "mic": "NYQ",
+          "yahoo_ticker": "MUFG",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_NBIS": {
+      "name": "Nebius Group N.V.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "NBIS",
+          "mic": "NMS",
+          "yahoo_ticker": "NBIS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_NETL": {
+      "name": "Colterpoint Net Lease Real Esta",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "NETL",
+          "mic": "PCX",
+          "yahoo_ticker": "NETL",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_NGG": {
+      "name": "National Grid Transco, PLC Nati",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "NGG",
+          "mic": "NYQ",
+          "yahoo_ticker": "NGG",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_NIQ": {
+      "name": "NIQ Global Intelligence plc",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "NIQ",
+          "mic": "NYQ",
+          "yahoo_ticker": "NIQ",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_NTR": {
+      "name": "Nutrien Ltd.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "NTR",
+          "mic": "NYQ",
+          "yahoo_ticker": "NTR",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_NVDL": {
+      "name": "GraniteShares 2x Long NVDA Dail",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "NVDL",
+          "mic": "NGM",
+          "yahoo_ticker": "NVDL",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_NVO": {
+      "name": "Novo Nordisk A/S",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "NVO",
+          "mic": "NYQ",
+          "yahoo_ticker": "NVO",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_NXT": {
+      "name": "Nextpower Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "NXT",
+          "mic": "NMS",
+          "yahoo_ticker": "NXT",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_OKLO": {
+      "name": "Oklo Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "OKLO",
+          "mic": "NYQ",
+          "yahoo_ticker": "OKLO",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_ONON": {
+      "name": "On Holding AG",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "ONON",
+          "mic": "NYQ",
+          "yahoo_ticker": "ONON",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_OPAL": {
+      "name": "OPAL Fuels Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "OPAL",
+          "mic": "NCM",
+          "yahoo_ticker": "OPAL",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_OVV": {
+      "name": "Ovintiv Inc. (DE)",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "OVV",
+          "mic": "NYQ",
+          "yahoo_ticker": "OVV",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_PL": {
+      "name": "Planet Labs PBC",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "PL",
+          "mic": "NYQ",
+          "yahoo_ticker": "PL",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_PLGO": {
+      "name": "Pelagos Insurance Capital Limit",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "PLGO",
+          "mic": "NYQ",
+          "yahoo_ticker": "PLGO",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_PLNT": {
+      "name": "Planet Fitness, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "PLNT",
+          "mic": "NYQ",
+          "yahoo_ticker": "PLNT",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_PLUG": {
+      "name": "Plug Power, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "PLUG",
+          "mic": "NCM",
+          "yahoo_ticker": "PLUG",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_PLUS": {
+      "name": "ePlus inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "PLUS",
+          "mic": "NMS",
+          "yahoo_ticker": "PLUS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_PRF": {
+      "name": "Invesco RAFI US 1000 ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "PRF",
+          "mic": "PCX",
+          "yahoo_ticker": "PRF",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_PRFZ": {
+      "name": "Invesco RAFI US 1500 Small-Mid ",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "PRFZ",
+          "mic": "NGM",
+          "yahoo_ticker": "PRFZ",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_PRLB": {
+      "name": "Proto Labs, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "PRLB",
+          "mic": "NYQ",
+          "yahoo_ticker": "PRLB",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_PTON": {
+      "name": "Peloton Interactive, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "PTON",
+          "mic": "NMS",
+          "yahoo_ticker": "PTON",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_QQQ": {
+      "name": "Invesco QQQ Trust, Series 1",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "QQQ",
+          "mic": "NGM",
+          "yahoo_ticker": "QQQ",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_QQQM": {
+      "name": "Invesco NASDAQ 100 ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "QQQM",
+          "mic": "NGM",
+          "yahoo_ticker": "QQQM",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_RBC": {
+      "name": "RBC Bearings Incorporated",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "RBC",
+          "mic": "NYQ",
+          "yahoo_ticker": "RBC",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_REX": {
+      "name": "REX American Resources Corporat",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "REX",
+          "mic": "NYQ",
+          "yahoo_ticker": "REX",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_RGTI": {
+      "name": "Rigetti Computing, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "RGTI",
+          "mic": "NCM",
+          "yahoo_ticker": "RGTI",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_ROC": {
+      "name": "Rank One Computing Corporation",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "ROC",
+          "mic": "NCM",
+          "yahoo_ticker": "ROC",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_ROG": {
+      "name": "Rogers Corporation",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "ROG",
+          "mic": "NYQ",
+          "yahoo_ticker": "ROG",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_RPAR": {
+      "name": "RPAR Risk Parity ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "RPAR",
+          "mic": "PCX",
+          "yahoo_ticker": "RPAR",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_RSP": {
+      "name": "Invesco S&P 500 Equal Weight ET",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "RSP",
+          "mic": "PCX",
+          "yahoo_ticker": "RSP",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SABA": {
+      "name": "Saba Capital Income & Opportunities Fund II",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SABA",
+          "mic": "NYQ",
+          "yahoo_ticker": "SABA",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SCHA": {
+      "name": "Schwab U.S. Small-Cap ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SCHA",
+          "mic": "PCX",
+          "yahoo_ticker": "SCHA",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SCHD": {
+      "name": "Schwab US Dividend Equity ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SCHD",
+          "mic": "PCX",
+          "yahoo_ticker": "SCHD",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SCHG": {
+      "name": "Schwab U.S. Large-Cap Growth ET",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SCHG",
+          "mic": "PCX",
+          "yahoo_ticker": "SCHG",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SCHI": {
+      "name": "Schwab 5-10 Year Corporate Bond",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SCHI",
+          "mic": "PCX",
+          "yahoo_ticker": "SCHI",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SCHX": {
+      "name": "Schwab U.S. Large-Cap ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SCHX",
+          "mic": "PCX",
+          "yahoo_ticker": "SCHX",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SEI": {
+      "name": "Solaris Energy Infrastructure, ",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SEI",
+          "mic": "NYQ",
+          "yahoo_ticker": "SEI",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SFTBY": {
+      "name": "Softbank Group Corp",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SFTBY",
+          "mic": "PNK",
+          "yahoo_ticker": "SFTBY",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SGML": {
+      "name": "Sigma Lithium Corporation",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SGML",
+          "mic": "NCM",
+          "yahoo_ticker": "SGML",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SOFI": {
+      "name": "SoFi Technologies, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SOFI",
+          "mic": "NMS",
+          "yahoo_ticker": "SOFI",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SON": {
+      "name": "Sonoco Products Company",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SON",
+          "mic": "NYQ",
+          "yahoo_ticker": "SON",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SOXL": {
+      "name": "Direxion Daily Semiconductor Bu",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SOXL",
+          "mic": "PCX",
+          "yahoo_ticker": "SOXL",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SOXS": {
+      "name": "Direxion Daily Semiconductor Be",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SOXS",
+          "mic": "PCX",
+          "yahoo_ticker": "SOXS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SOXX": {
+      "name": "iShares PHLX SOX Semiconductor ",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SOXX",
+          "mic": "NGM",
+          "yahoo_ticker": "SOXX",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SPG": {
+      "name": "Simon Property Group, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SPG",
+          "mic": "NYQ",
+          "yahoo_ticker": "SPG",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SWAN": {
+      "name": "Amplify BlackSwan Growth & Trea",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SWAN",
+          "mic": "PCX",
+          "yahoo_ticker": "SWAN",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_SWP": {
+      "name": "SWP Growth & Income ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "SWP",
+          "mic": "NGM",
+          "yahoo_ticker": "SWP",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_TAK": {
+      "name": "Takeda Pharmaceutical Company L",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "TAK",
+          "mic": "NYQ",
+          "yahoo_ticker": "TAK",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_TME": {
+      "name": "Tencent Music Entertainment Gro",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "TME",
+          "mic": "NYQ",
+          "yahoo_ticker": "TME",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_TSEM": {
+      "name": "Tower Semiconductor Ltd.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "TSEM",
+          "mic": "NMS",
+          "yahoo_ticker": "TSEM",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_TSN": {
+      "name": "Tyson Foods, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "TSN",
+          "mic": "NYQ",
+          "yahoo_ticker": "TSN",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_TTEK": {
+      "name": "Tetra Tech, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "TTEK",
+          "mic": "NMS",
+          "yahoo_ticker": "TTEK",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_UBS": {
+      "name": "UBS Group AG Registered",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "UBS",
+          "mic": "NYQ",
+          "yahoo_ticker": "UBS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_UPS": {
+      "name": "United Parcel Service, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "UPS",
+          "mic": "NYQ",
+          "yahoo_ticker": "UPS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_USAR": {
+      "name": "USA Rare Earth, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "USAR",
+          "mic": "NGM",
+          "yahoo_ticker": "USAR",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_VG": {
+      "name": "Venture Global, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "VG",
+          "mic": "NYQ",
+          "yahoo_ticker": "VG",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_VIK": {
+      "name": "Viking Holdings Ltd",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "VIK",
+          "mic": "NYQ",
+          "yahoo_ticker": "VIK",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_VOO": {
+      "name": "Vanguard S&P 500 ETF",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "VOO",
+          "mic": "PCX",
+          "yahoo_ticker": "VOO",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_VOYA": {
+      "name": "Voya Financial, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "VOYA",
+          "mic": "NYQ",
+          "yahoo_ticker": "VOYA",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_VSNT": {
+      "name": "Versant Media Group, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "VSNT",
+          "mic": "NMS",
+          "yahoo_ticker": "VSNT",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_WBI": {
+      "name": "WaterBridge Infrastructure LLC",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "WBI",
+          "mic": "NYQ",
+          "yahoo_ticker": "WBI",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_WEBS": {
+      "name": "Direxion Daily Dow Jones Intern",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "WEBS",
+          "mic": "PCX",
+          "yahoo_ticker": "WEBS",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_WFCF": {
+      "name": "Where Food Comes From, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "WFCF",
+          "mic": "NCM",
+          "yahoo_ticker": "WFCF",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_XLE": {
+      "name": "State Street Energy Select Sect",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "XLE",
+          "mic": "PCX",
+          "yahoo_ticker": "XLE",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_XLK": {
+      "name": "State Street Technology Select ",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "XLK",
+          "mic": "PCX",
+          "yahoo_ticker": "XLK",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_YETI": {
+      "name": "YETI Holdings, Inc.",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "YETI",
+          "mic": "NYQ",
+          "yahoo_ticker": "YETI",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_^DJI": {
+      "name": "Dow Jones Industrial Average",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "^DJI",
+          "mic": "DJI",
+          "yahoo_ticker": "^DJI",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_^GSPC": {
+      "name": "S&P 500",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "^GSPC",
+          "mic": "SNP",
+          "yahoo_ticker": "^GSPC",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_^IXIC": {
+      "name": "NASDAQ Composite",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "^IXIC",
+          "mic": "NIM",
+          "yahoo_ticker": "^IXIC",
+          "sedol": ""
+        }
+      ]
+    },
+    "YAHOO_^TNX": {
+      "name": "CBOE Interest Rate 10 Year T No",
+      "status": "discovered",
+      "listings": [
+        {
+          "ticker": "^TNX",
+          "mic": "CGI",
+          "yahoo_ticker": "^TNX",
+          "sedol": ""
+        }
+      ]
+    }
+  }
+}

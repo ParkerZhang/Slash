@@ -1,0 +1,54 @@
+{
+  "US86800U3023": {
+    "names": [
+      "SUPER MICRO COMPUTER INC AT XETRA",
+      "SUPER MICRO COMPUTER INC AT NASDAQ GS"
+    ],
+    "mics": [
+      "XETR",
+      "XNGS"
+    ]
+  },
+  "CA8787422044": {
+    "names": [
+      "TECK RESOURCES LTD-CLS B AT NEW YORK",
+      "TECK RESOURCES LTD-CLS B AT TORONTO"
+    ],
+    "mics": [
+      "XNYS",
+      "XTSE"
+    ]
+  },
+  "US88160R1014": {
+    "names": [
+      "TESLA MOTORS INC",
+      "TESLA INC AT AUSTRIAVIENNA",
+      "TESLA INC AT XETRA"
+    ],
+    "mics": [
+      "XETR",
+      "XWBO",
+      "XNGS"
+    ]
+  },
+  "US8825081040": {
+    "names": [
+      "TEXAS INSTRUMENTS INC AT NASDAQ GS",
+      "TEXAS INSTRUMENTS INC AT AUSTRIAVIENNA",
+      "TEXAS INSTRUMENTS INC AT XETRA"
+    ],
+    "mics": [
+      "XETR",
+      "XWBO",
+      "XNGS"
+    ]
+  },
+  "BRTIMSACNOR5": {
+    "names": [
+      "TIM SA AT BM FBOVESPA"
+    ],
+    "mics": [
+      "BVMF"
+    ]
+  }
+}

@@ -1,0 +1,148 @@
+[
+  {
+    "sample_name": "SUPER MICRO COMPUTER INC AT NASDAQ GS",
+    "sample_ticker": "SMCI_UW",
+    "sample_mic": "XNGS",
+    "sample_isin": "US86800U3023",
+    "sample_sedol": "BRC3N73",
+    "normalized_root": "SMCI",
+    "resolved_yahoo_ticker": "SMCI",
+    "matches": []
+  },
+  {
+    "sample_name": "SUPER MICRO COMPUTER INC AT XETRA",
+    "sample_ticker": "MS51_GY",
+    "sample_mic": "XETR",
+    "sample_isin": "US86800U3023",
+    "sample_sedol": "BLFCV82",
+    "normalized_root": "MS51",
+    "resolved_yahoo_ticker": "MS51.DE",
+    "matches": []
+  },
+  {
+    "sample_name": "TECK RESOURCES LTD-CLS B AT NEW YORK",
+    "sample_ticker": "TECK.UN",
+    "sample_mic": "XNYS",
+    "sample_isin": "CA8787422044",
+    "sample_sedol": "2124533",
+    "normalized_root": "TECK",
+    "resolved_yahoo_ticker": "TECK",
+    "matches": []
+  },
+  {
+    "sample_name": "TECK RESOURCES LTD-CLS B AT TORONTO",
+    "sample_ticker": "TECK/B.CT",
+    "sample_mic": "XTSE",
+    "sample_isin": "CA8787422044",
+    "sample_sedol": "2879327",
+    "normalized_root": "TECK",
+    "resolved_yahoo_ticker": "TECK.TO",
+    "matches": []
+  },
+  {
+    "sample_name": "TESLA INC AT AUSTRIAVIENNA",
+    "sample_ticker": "TSLA.AV",
+    "sample_mic": "XWBO",
+    "sample_isin": "US88160R1014",
+    "sample_sedol": "BF1SNQ4",
+    "normalized_root": "TSLA",
+    "resolved_yahoo_ticker": "TSLA.VI",
+    "matches": [
+      {
+        "identifier_ticker": "TSLA",
+        "method": "root_ticker",
+        "identifier": {
+          "name": "Tesla, Inc.",
+          "type": "equity",
+          "exchange": "NMS",
+          "longname": "Tesla, Inc.",
+          "source": "scan-auto"
+        }
+      }
+    ]
+  },
+  {
+    "sample_name": "TESLA INC AT XETRA",
+    "sample_ticker": "TLO.GY",
+    "sample_mic": "XETR",
+    "sample_isin": "US88160R1014",
+    "sample_sedol": "B3XFVH6",
+    "normalized_root": "TLO",
+    "resolved_yahoo_ticker": "TLO.DE",
+    "matches": [
+      {
+        "identifier_ticker": "TSLA",
+        "method": "isin",
+        "identifier": {
+          "name": "Tesla, Inc.",
+          "type": "equity",
+          "exchange": "NMS",
+          "longname": "Tesla, Inc.",
+          "source": "scan-auto"
+        }
+      }
+    ]
+  },
+  {
+    "sample_name": "TESLA MOTORS INC",
+    "sample_ticker": "TSLA.UW",
+    "sample_mic": "XNGS",
+    "sample_isin": "US88160R1014",
+    "sample_sedol": "B616C79",
+    "normalized_root": "TSLA",
+    "resolved_yahoo_ticker": "TSLA",
+    "matches": [
+      {
+        "identifier_ticker": "TSLA",
+        "method": "exact_yahoo_ticker",
+        "identifier": {
+          "name": "Tesla, Inc.",
+          "type": "equity",
+          "exchange": "NMS",
+          "longname": "Tesla, Inc.",
+          "source": "scan-auto"
+        }
+      }
+    ]
+  },
+  {
+    "sample_name": "TEXAS INSTRUMENTS INC AT AUSTRIAVIENNA",
+    "sample_ticker": "TXN.AV",
+    "sample_mic": "XWBO",
+    "sample_isin": "US8825081040",
+    "sample_sedol": "BF1SNP3",
+    "normalized_root": "TXN",
+    "resolved_yahoo_ticker": "TXN.VI",
+    "matches": []
+  },
+  {
+    "sample_name": "TEXAS INSTRUMENTS INC AT NASDAQ GS",
+    "sample_ticker": "TXN.UW",
+    "sample_mic": "XNGS",
+    "sample_isin": "US8825081040",
+    "sample_sedol": "2885409",
+    "normalized_root": "TXN",
+    "resolved_yahoo_ticker": "TXN",
+    "matches": []
+  },
+  {
+    "sample_name": "TEXAS INSTRUMENTS INC AT XETRA",
+    "sample_ticker": "TII.GY",
+    "sample_mic": "XETR",
+    "sample_isin": "US8825081040",
+    "sample_sedol": "B0K3NK9",
+    "normalized_root": "TII",
+    "resolved_yahoo_ticker": "TII.DE",
+    "matches": []
+  },
+  {
+    "sample_name": "TIM SA AT BM FBOVESPA",
+    "sample_ticker": "TIMS3.BS",
+    "sample_mic": "BVMF",
+    "sample_isin": "BRTIMSACNOR5",
+    "sample_sedol": "BN71RB6",
+    "normalized_root": "TIMS3",
+    "resolved_yahoo_ticker": "TIMS3.SA",
+    "matches": []
+  }
+]

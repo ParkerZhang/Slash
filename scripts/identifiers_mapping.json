@@ -1,0 +1,1329 @@
+{
+  "AI": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ],
+    "isin": "US12468P1049"
+  },
+  "APPS": {
+    "mics": [
+      "XNAS"
+    ],
+    "isin": "NO0010040611"
+  },
+  "DJT": {
+    "mics": [
+      "XNAS",
+      "XFRA",
+      "XSTU",
+      "XMUN"
+    ],
+    "isin": "US25400Q1058"
+  },
+  "DLO": {
+    "mics": [
+      "XNAS",
+      "XFRA",
+      "XMEX"
+    ]
+  },
+  "ENPH": {
+    "mics": [
+      "XNAS"
+    ],
+    "isin": "US29355A1079"
+  },
+  "FIG": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ],
+    "isin": "DBFBC8E97384"
+  },
+  "GOLF": {
+    "mics": [
+      "XNYS",
+      "XSTU",
+      "XFRA",
+      "XMUN"
+    ]
+  },
+  "HELP": {
+    "mics": [
+      "XNAS",
+      "XNEO"
+    ]
+  },
+  "INTC": {
+    "mics": [
+      "XNAS",
+      "XMIL",
+      "XNEO",
+      "XFRA",
+      "XHKG",
+      "XBUE",
+      "XSGO"
+    ],
+    "isin": "US4581401001"
+  },
+  "IPOS": {
+    "mics": [
+      "XASE"
+    ],
+    "isin": "US25400Q1058"
+  },
+  "LIFE": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "META": {
+    "mics": [
+      "XNAS"
+    ],
+    "isin": "US30303M1027"
+  },
+  "MICC": {
+    "mics": [
+      "XNYS",
+      "XAMS",
+      "XFRA",
+      "XLON"
+    ],
+    "isin": "NL0015002MS2"
+  },
+  "MSFT": {
+    "mics": [
+      "XNAS",
+      "XMEX",
+      "XMIL",
+      "XTSE"
+    ],
+    "isin": "US5949181045",
+    "sedol": "2588173"
+  },
+  "NOK": {
+    "mics": [
+      "XNYS",
+      "XHEL",
+      "XFRA",
+      "XWBO",
+      "XLON",
+      "XSTO",
+      "XOTC"
+    ],
+    "isin": "FI0009000681"
+  },
+  "NU": {
+    "mics": [
+      "XNYS",
+      "XFRA",
+      "XBSP",
+      "XBUE",
+      "XSTU",
+      "XMUN",
+      "XHAM"
+    ]
+  },
+  "NVDA": {
+    "mics": [
+      "XNAS",
+      "XFRA",
+      "XBUE",
+      "XMEX",
+      "XMIL"
+    ],
+    "isin": "US67066G1040",
+    "sedol": "2379504"
+  },
+  "ODDS": {
+    "mics": [
+      "XNAS",
+      "XSTU"
+    ]
+  },
+  "ONDS": {
+    "mics": [
+      "XNAS",
+      "XFRA",
+      "XMIL",
+      "XSTU",
+      "XMUN",
+      "XHAM"
+    ]
+  },
+  "PC": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "PETS": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "POET": {
+    "mics": [
+      "XNAS",
+      "XFRA",
+      "XMUN",
+      "XSTU",
+      "XHAM"
+    ],
+    "isin": "US02079K3059"
+  },
+  "SEDG": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "SOC": {
+    "mics": [
+      "XMIL",
+      "XNYS",
+      "XFRA",
+      "XHAM"
+    ]
+  },
+  "SPY": {
+    "mics": [
+      "XASE",
+      "XMEX",
+      "XTKS",
+      "XSES"
+    ]
+  },
+  "TECH": {
+    "mics": [
+      "XNAS",
+      "XBSP",
+      "XFRA"
+    ]
+  },
+  "TM": {
+    "mics": [
+      "XNYS",
+      "XTKS",
+      "XOTC",
+      "XWBO",
+      "XSTU",
+      "XASE",
+      "XBUE"
+    ],
+    "isin": "JP3633400001"
+  },
+  "TNGX": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "TSLA": {
+    "mics": [
+      "XNAS"
+    ],
+    "isin": "US88160R1014",
+    "sedol": "88160R1"
+  },
+  "TV": {
+    "mics": [
+      "XNYS"
+    ]
+  },
+  "UK": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "ULTA": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "UNH": {
+    "mics": [
+      "XNYS",
+      "XSGO",
+      "XMIL",
+      "XBSP",
+      "XFRA",
+      "XBUE"
+    ]
+  },
+  "USAS": {
+    "mics": [
+      "XASE",
+      "XTSE",
+      "XFRA"
+    ]
+  },
+  "XBOX": {
+    "mics": [
+      "XBOS"
+    ]
+  },
+  "YSS": {
+    "mics": [
+      "XNYS"
+    ]
+  },
+  "AAPL": {
+    "mics": [
+      "XNAS",
+      "XFRA",
+      "XMEX",
+      "XNEO",
+      "XBUE"
+    ],
+    "isin": "US0378331005",
+    "sedol": "0263494"
+  },
+  "ACV": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "AKRE": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "ALPS": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "AMAT": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "AMS": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "AMZN": {
+    "mics": [
+      "XNAS"
+    ],
+    "isin": "US0231351067"
+  },
+  "ARM": {
+    "mics": [
+      "XNAS",
+      "XMEX",
+      "XASE",
+      "XBUE",
+      "XSTU",
+      "XFRA"
+    ]
+  },
+  "ARMK": {
+    "mics": [
+      "XNYS",
+      "XFRA",
+      "XLON",
+      "XSTU"
+    ]
+  },
+  "ASTS": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "AURA": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "AVOS": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "B": {
+    "mics": [
+      "XNYS",
+      "XTSE",
+      "XBUE",
+      "XLON",
+      "XFRA"
+    ]
+  },
+  "BA": {
+    "mics": [
+      "XNYS",
+      "XFRA",
+      "XNEO",
+      "XBSP",
+      "XLON",
+      "XMIL"
+    ]
+  },
+  "BABA": {
+    "mics": [
+      "XNYS",
+      "XHKG",
+      "XMEX",
+      "XOTC",
+      "XFRA",
+      "XWBO"
+    ],
+    "isin": "KYG017191142",
+    "sedol": "B8K9Q57"
+  },
+  "BBH": {
+    "mics": [
+      "XNAS",
+      "XMUN"
+    ]
+  },
+  "BIRK": {
+    "mics": [
+      "XNYS",
+      "XFRA",
+      "XHAM",
+      "XSTU",
+      "XMUN"
+    ]
+  },
+  "BMO": {
+    "mics": [
+      "XTSE",
+      "XNYS",
+      "XLON",
+      "XSTU",
+      "XNAS",
+      "XMEX"
+    ]
+  },
+  "BN": {
+    "mics": [
+      "XNYS",
+      "XTSE",
+      "XFRA",
+      "XOTC"
+    ]
+  },
+  "BNKK": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "BTDR": {
+    "mics": [
+      "XNAS",
+      "XFRA",
+      "XMUN",
+      "XSTU",
+      "XHAM"
+    ]
+  },
+  "CAT": {
+    "mics": [
+      "XNYS",
+      "XBUE",
+      "XMEX",
+      "XSGO",
+      "XFRA",
+      "XMUN",
+      "XNEO"
+    ]
+  },
+  "CBRS": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "CCM": {
+    "mics": [
+      "XNYS"
+    ]
+  },
+  "CECO": {
+    "mics": [
+      "XNAS",
+      "XFRA",
+      "XMUN",
+      "XSTU"
+    ]
+  },
+  "CEG": {
+    "mics": [
+      "XNAS",
+      "XMEX",
+      "XFRA",
+      "XBUE",
+      "XBKK"
+    ]
+  },
+  "CF": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "CICC": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "CLS": {
+    "mics": [
+      "XNYS",
+      "XTSE",
+      "XFRA",
+      "XNEO",
+      "XMUN",
+      "XSTU",
+      "XBUE"
+    ]
+  },
+  "CRCL": {
+    "mics": [
+      "XNYS",
+      "XFRA",
+      "XMIL",
+      "XHAM",
+      "XMEX"
+    ]
+  },
+  "CRM": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ],
+    "isin": "CITEREFM2019",
+    "sedol": "2536115"
+  },
+  "CRMD": {
+    "mics": [
+      "XNAS",
+      "XFRA",
+      "XSTU",
+      "XMUN",
+      "XHAM"
+    ]
+  },
+  "CSCO": {
+    "mics": [
+      "XNAS"
+    ],
+    "isin": "US17275R1023"
+  },
+  "CSIQ": {
+    "mics": [
+      "XNAS",
+      "XLON",
+      "XMEX",
+      "XFRA",
+      "XSTU",
+      "XMUN"
+    ]
+  },
+  "DAC": {
+    "mics": [
+      "XNYS",
+      "XFRA"
+    ]
+  },
+  "DANA": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "DB": {
+    "mics": [
+      "XNYS",
+      "XFRA",
+      "XWBO",
+      "XMEX",
+      "XBSP"
+    ]
+  },
+  "DDS": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "DIA": {
+    "mics": [
+      "XASE",
+      "XAMS",
+      "XSES",
+      "XMEX"
+    ]
+  },
+  "DRAM": {
+    "mics": [
+      "XBOS"
+    ]
+  },
+  "DT": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "ECO": {
+    "mics": [
+      "XNYS",
+      "XOSL",
+      "XMUN",
+      "XFRA",
+      "XSTU"
+    ]
+  },
+  "ELM": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "ELWT": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "EMQQ": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "EPAM": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "FENC": {
+    "mics": [
+      "XNAS",
+      "XFRA",
+      "XTSE",
+      "XMUN",
+      "XSTU",
+      "XNEO"
+    ]
+  },
+  "FMQQ": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "FNDA": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "FNDX": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "FOX": {
+    "mics": [
+      "XNAS",
+      "XFRA",
+      "XMEX",
+      "XMUN"
+    ]
+  },
+  "FPA": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "FPS": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "FRMI": {
+    "mics": [
+      "XNAS",
+      "XLON",
+      "XFRA",
+      "XHAM",
+      "XMUN",
+      "XSTU"
+    ]
+  },
+  "GGM": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "GNE": {
+    "mics": [
+      "XNYS",
+      "XLON",
+      "XFRA",
+      "XSTU"
+    ]
+  },
+  "GOOS": {
+    "mics": [
+      "XNYS",
+      "XTSE",
+      "XMUN",
+      "XFRA",
+      "XSTU",
+      "XLON"
+    ]
+  },
+  "GRO": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "GS": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "GURU": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "HCM": {
+    "mics": [
+      "XNAS",
+      "XFRA",
+      "XOTC",
+      "XLON",
+      "XHKG"
+    ]
+  },
+  "HIMS": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "HMC": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ],
+    "isin": "EDD4F85FFD30"
+  },
+  "HULL": {
+    "mics": [
+      "XASE",
+      "XBOS"
+    ]
+  },
+  "IDX": {
+    "mics": [
+      "XASE",
+      "XHAM"
+    ]
+  },
+  "IMSR": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "IMSRW": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "IPI": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "JD": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "KEP": {
+    "mics": [
+      "XNYS",
+      "XFRA",
+      "XBUE"
+    ]
+  },
+  "KGEI": {
+    "mics": [
+      "XFRA",
+      "XNAS",
+      "XTSE",
+      "XSTU",
+      "XNEO"
+    ]
+  },
+  "KLAR": {
+    "mics": [
+      "XNYS",
+      "XFRA",
+      "XMUN",
+      "XHAM",
+      "XSTU"
+    ]
+  },
+  "LEU": {
+    "mics": [
+      "XNYS",
+      "XSTU",
+      "XFRA",
+      "XMUN",
+      "XHAM"
+    ]
+  },
+  "LGN": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "LI": {
+    "mics": [
+      "XNAS",
+      "XFRA",
+      "XHKG",
+      "XHAM",
+      "XSTU"
+    ]
+  },
+  "LUCD": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "MAN": {
+    "mics": [
+      "XNYS",
+      "XFRA",
+      "XMUN",
+      "XSTU"
+    ]
+  },
+  "MAX": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "MC": {
+    "mics": [
+      "XNYS",
+      "XFRA"
+    ]
+  },
+  "MFC": {
+    "mics": [
+      "XNYS",
+      "XTSE",
+      "XHKG",
+      "XLON"
+    ]
+  },
+  "MFG": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "MKAM": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "MNDY": {
+    "mics": [
+      "XNAS",
+      "XFRA",
+      "XSTU",
+      "XMUN",
+      "XMEX",
+      "XHAM"
+    ]
+  },
+  "MOS": {
+    "mics": [
+      "XNYS",
+      "XMEX",
+      "XBSP",
+      "XBUE",
+      "XLON",
+      "XFRA"
+    ]
+  },
+  "MUFG": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "NBIS": {
+    "mics": [
+      "XNAS",
+      "XFRA",
+      "XMUN",
+      "XSTU",
+      "XMEX",
+      "XBKK"
+    ]
+  },
+  "NETL": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "NGG": {
+    "mics": [
+      "XNYS",
+      "XLON",
+      "XOTC",
+      "XMUN",
+      "XBSP",
+      "XBUE",
+      "XFRA"
+    ]
+  },
+  "NIQ": {
+    "mics": [
+      "XNYS",
+      "XFRA"
+    ]
+  },
+  "NTR": {
+    "mics": [
+      "XNYS",
+      "XTSE",
+      "XNEO",
+      "XSTU",
+      "XMUN",
+      "XFRA",
+      "XMEX"
+    ]
+  },
+  "NVDL": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "NVO": {
+    "mics": [
+      "XNYS",
+      "XCSE",
+      "XFRA",
+      "XHAM",
+      "XLON",
+      "XWBO",
+      "XASE"
+    ]
+  },
+  "NXT": {
+    "mics": [
+      "XNAS",
+      "XMEX"
+    ]
+  },
+  "OKLO": {
+    "mics": [
+      "XNYS",
+      "XMEX",
+      "XBUE"
+    ]
+  },
+  "ONON": {
+    "mics": [
+      "XNYS",
+      "XFRA",
+      "XMIL",
+      "XSTU",
+      "XBKK",
+      "XMUN"
+    ]
+  },
+  "OPAL": {
+    "mics": [
+      "XNAS",
+      "XFRA"
+    ]
+  },
+  "OVV": {
+    "mics": [
+      "XNYS",
+      "XTSE",
+      "XMUN",
+      "XSTU",
+      "XFRA",
+      "XNEO"
+    ]
+  },
+  "PL": {
+    "mics": [
+      "XNYS",
+      "XMIL",
+      "XFRA",
+      "XSTU",
+      "XHAM"
+    ]
+  },
+  "PLGO": {
+    "mics": [
+      "XNYS",
+      "XFRA"
+    ]
+  },
+  "PLNT": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "PLUG": {
+    "mics": [
+      "XNAS",
+      "XMIL",
+      "XFRA",
+      "XMUN",
+      "XLON"
+    ]
+  },
+  "PLUS": {
+    "mics": [
+      "XNAS",
+      "XSTU",
+      "XFRA",
+      "XMUN"
+    ]
+  },
+  "PRF": {
+    "mics": [
+      "XASE",
+      "XMEX"
+    ]
+  },
+  "PRFZ": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "PRLB": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "PTON": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "QQQ": {
+    "mics": [
+      "XNAS",
+      "XHKG",
+      "XLON",
+      "XMEX",
+      "XBUE"
+    ]
+  },
+  "QQQM": {
+    "mics": [
+      "XNAS",
+      "XMEX"
+    ]
+  },
+  "RBC": {
+    "mics": [
+      "XNYS",
+      "XFRA"
+    ]
+  },
+  "REX": {
+    "mics": [
+      "XNYS",
+      "XFRA"
+    ]
+  },
+  "RGTI": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "ROC": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "ROG": {
+    "mics": [
+      "XNYS",
+      "XFRA"
+    ]
+  },
+  "RPAR": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "RSP": {
+    "mics": [
+      "XASE",
+      "XMEX"
+    ]
+  },
+  "SABA": {
+    "mics": [
+      "XNYS"
+    ]
+  },
+  "SCHA": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "SCHD": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "SCHG": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "SCHI": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "SCHX": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "SEI": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "SFTBY": {
+    "mics": [
+      "XOTC",
+      "XTKS",
+      "XSTU",
+      "XFRA",
+      "XWBO"
+    ]
+  },
+  "SGML": {
+    "mics": [
+      "XNAS",
+      "XVAN",
+      "XBSP",
+      "XFRA"
+    ]
+  },
+  "SOFI": {
+    "mics": [
+      "XNAS"
+    ],
+    "isin": "US83406F1021"
+  },
+  "SON": {
+    "mics": [
+      "XNYS",
+      "XFRA"
+    ]
+  },
+  "SOXL": {
+    "mics": [
+      "XASE",
+      "XMEX"
+    ]
+  },
+  "SOXS": {
+    "mics": [
+      "XASE",
+      "XMEX"
+    ]
+  },
+  "SOXX": {
+    "mics": [
+      "XNAS",
+      "XMEX",
+      "XBSP"
+    ]
+  },
+  "SPG": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "SWAN": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "SWP": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "TAK": {
+    "mics": [
+      "XNYS",
+      "XFRA",
+      "XOTC",
+      "XBSP",
+      "XLON",
+      "XWBO"
+    ]
+  },
+  "TME": {
+    "mics": [
+      "XNYS",
+      "XHKG",
+      "XMEX",
+      "XMUN",
+      "XFRA",
+      "XSTU",
+      "XLON"
+    ]
+  },
+  "TSEM": {
+    "mics": [
+      "XNAS",
+      "XMUN",
+      "XSTU",
+      "XFRA",
+      "XHAM"
+    ]
+  },
+  "TSN": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "TTEK": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "UBS": {
+    "mics": [
+      "XNYS",
+      "XFRA",
+      "XSTU",
+      "XLON",
+      "XMEX"
+    ]
+  },
+  "UPS": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "USAR": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "VG": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "VIK": {
+    "mics": [
+      "XNYS",
+      "XFRA",
+      "XMUN"
+    ]
+  },
+  "VOO": {
+    "mics": [
+      "XASE",
+      "XMEX"
+    ]
+  },
+  "VOYA": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "VSNT": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "WBI": {
+    "mics": [
+      "XNYS"
+    ]
+  },
+  "WEBS": {
+    "mics": [
+      "XASE"
+    ]
+  },
+  "WFCF": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "XLE": {
+    "mics": [
+      "XASE",
+      "XMEX"
+    ]
+  },
+  "XLK": {
+    "mics": [
+      "XASE",
+      "XMEX"
+    ]
+  },
+  "YETI": {
+    "mics": [
+      "XNYS",
+      "XNAS"
+    ]
+  },
+  "^DJI": {
+    "mics": [
+      "XNYS",
+      "XASE",
+      "XTSE",
+      "XSTU",
+      "XPAR"
+    ]
+  },
+  "^GSPC": {
+    "mics": [
+      "XCME"
+    ]
+  },
+  "^IXIC": {
+    "mics": [
+      "XNAS"
+    ]
+  },
+  "^TNX": {
+    "mics": [
+      "XCBO"
+    ]
+  }
+}

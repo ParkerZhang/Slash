@@ -1,0 +1,63 @@
+{
+  "family": {
+    "name": "Financial Identifiers",
+    "dimensions": [18, 62, 28, 245],
+    "base_value": 0.15,
+    "marker_boost": 0.30
+  },
+  "tokens": [
+    {
+      "token": "#MIC",
+      "id": 30900,
+      "marker_dim": 18,
+      "vector": [0.30, 0.15, 0.15, 0.15],
+      "vectors_desc": "[dim18, dim62, dim28, dim245]"
+    },
+    {
+      "token": "ISIN",
+      "id": 30853,
+      "marker_dim": 62,
+      "vector": [0.15, 0.30, 0.15, 0.15],
+      "vectors_desc": "[dim18, dim62, dim28, dim245]"
+    },
+    {
+      "token": "SEDOL",
+      "id": 30856,
+      "marker_dim": 28,
+      "vector": [0.15, 0.15, 0.30, 0.15],
+      "vectors_desc": "[dim18, dim62, dim28, dim245]"
+    },
+    {
+      "token": "TICKER",
+      "id": 30858,
+      "marker_dim": 245,
+      "vector": [0.15, 0.15, 0.15, 0.30],
+      "vectors_desc": "[dim18, dim62, dim28, dim245]"
+    }
+  ],
+  "cosine_similarity_matrix": {
+    "description": "All pairs = 0.8571 (uniform family closeness)",
+    "matrix": {
+      "headers": ["#MIC", "ISIN", "SEDOL", "TICKER"],
+      "rows": [
+        [1.0, 0.8571, 0.8571, 0.8571],
+        [0.8571, 1.0, 0.8571, 0.8571],
+        [0.8571, 0.8571, 1.0, 0.8571],
+        [0.8571, 0.8571, 0.8571, 1.0]
+      ]
+    }
+  },
+  "separation_from_existing": {
+    "description": "Nearest existing token is ~5x farther than nearest family member",
+    "#MIC": {"nearest_existing_sim": 0.164, "nearest_family_sim": 0.857, "gap_x": 5.2},
+    "ISIN": {"nearest_existing_sim": 0.179, "nearest_family_sim": 0.857, "gap_x": 4.8},
+    "SEDOL": {"nearest_existing_sim": 0.175, "nearest_family_sim": 0.857, "gap_x": 4.9},
+    "TICKER": {"nearest_existing_sim": 0.176, "nearest_family_sim": 0.857, "gap_x": 4.9}
+  },
+  "model": {
+    "embedding_dim": 384,
+    "base_vocab_size": 30522,
+    "total_vocab_size": 30902,
+    "onnx_matrix_shape": [30902, 384]
+  }
+}

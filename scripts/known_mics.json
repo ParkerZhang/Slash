@@ -1,0 +1,182 @@
+[
+  {
+    "mic": "XNYS",
+    "name": "New York Stock Exchange",
+    "yahoo_code": "NYQ"
+  },
+  {
+    "mic": "XNAS",
+    "name": "NASDAQ Stock Exchange",
+    "yahoo_code": "NMS"
+  },
+  {
+    "mic": "XASE",
+    "name": "NYSE American Stock Exchange",
+    "yahoo_code": "PCX"
+  },
+  {
+    "mic": "XBOS",
+    "name": "CBOE BZX Exchange",
+    "yahoo_code": "BTS"
+  },
+  {
+    "mic": "XLON",
+    "name": "London Stock Exchange",
+    "yahoo_code": "LSE"
+  },
+  {
+    "mic": "XTKS",
+    "name": "Tokyo Stock Exchange",
+    "yahoo_code": "JPX"
+  },
+  {
+    "mic": "XHKG",
+    "name": "Hong Kong Stock Exchange",
+    "yahoo_code": "HKG"
+  },
+  {
+    "mic": "XPAR",
+    "name": "Euronext Paris",
+    "yahoo_code": "PAR"
+  },
+  {
+    "mic": "XSHG",
+    "name": "Shanghai Stock Exchange",
+    "yahoo_code": "SHG"
+  },
+  {
+    "mic": "XTSE",
+    "name": "Toronto Stock Exchange",
+    "yahoo_code": "TOR"
+  },
+  {
+    "mic": "XASX",
+    "name": "Australian Securities Exchange",
+    "yahoo_code": "ASX"
+  },
+  {
+    "mic": "XBSP",
+    "name": "B3 Brasil Bolsa Balcao",
+    "yahoo_code": "SAO"
+  },
+  {
+    "mic": "XFRA",
+    "name": "Frankfurt Stock Exchange Xetra",
+    "yahoo_code": "GER"
+  },
+  {
+    "mic": "XSWX",
+    "name": "Swiss Exchange",
+    "yahoo_code": "SWX"
+  },
+  {
+    "mic": "XNZE",
+    "name": "New Zealand Exchange",
+    "yahoo_code": "NZE"
+  },
+  {
+    "mic": "XSGO",
+    "name": "Santiago Stock Exchange",
+    "yahoo_code": "SGO"
+  },
+  {
+    "mic": "XBOM",
+    "name": "BSE India",
+    "yahoo_code": "BOM"
+  },
+  {
+    "mic": "XNSE",
+    "name": "National Stock Exchange of India",
+    "yahoo_code": "NSI"
+  },
+  {
+    "mic": "XKOS",
+    "name": "Korea Exchange",
+    "yahoo_code": "KOS"
+  },
+  {
+    "mic": "XSES",
+    "name": "Singapore Stock Exchange",
+    "yahoo_code": "SES"
+  },
+  {
+    "mic": "XTAI",
+    "name": "Taiwan Stock Exchange",
+    "yahoo_code": "TAI"
+  },
+  {
+    "mic": "XWBO",
+    "name": "Vienna Stock Exchange",
+    "yahoo_code": "VIE"
+  },
+  {
+    "mic": "XAMS",
+    "name": "Euronext Amsterdam",
+    "yahoo_code": "AMS"
+  },
+  {
+    "mic": "XBKK",
+    "name": "Stock Exchange of Thailand",
+    "yahoo_code": "SET"
+  },
+  {
+    "mic": "XBUE",
+    "name": "Buenos Aires Stock Exchange",
+    "yahoo_code": "BUE"
+  },
+  {
+    "mic": "XCSE",
+    "name": "Nasdaq Copenhagen",
+    "yahoo_code": "CPH"
+  },
+  {
+    "mic": "XHAM",
+    "name": "Hamburg Stock Exchange",
+    "yahoo_code": "HAN"
+  },
+  {
+    "mic": "XHEL",
+    "name": "Nasdaq Helsinki",
+    "yahoo_code": "HEL"
+  },
+  {
+    "mic": "XMEX",
+    "name": "Mexican Stock Exchange",
+    "yahoo_code": "MEX"
+  },
+  {
+    "mic": "XMIL",
+    "name": "Borsa Italiana Milan",
+    "yahoo_code": "MIL"
+  },
+  {
+    "mic": "XMUN",
+    "name": "Munich Stock Exchange",
+    "yahoo_code": "MUN"
+  },
+  {
+    "mic": "XNEO",
+    "name": "NEO Exchange",
+    "yahoo_code": "NEO"
+  },
+  {
+    "mic": "XOSL",
+    "name": "Oslo Stock Exchange",
+    "yahoo_code": "OSL"
+  },
+  {
+    "mic": "XSTO",
+    "name": "Nasdaq Stockholm",
+    "yahoo_code": "STO"
+  },
+  {
+    "mic": "XSTU",
+    "name": "Stuttgart Stock Exchange",
+    "yahoo_code": "STU"
+  },
+  {
+    "mic": "XVAN",
+    "name": "TSX Venture Exchange",
+    "yahoo_code": "VAN"
+  }
+]

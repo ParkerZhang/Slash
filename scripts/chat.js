@@ -174,6 +174,23 @@ function resolveMIC(text) {
 }
 
 const IDENT_PATH = path.join(__dirname, 'identifiers.json');
+const IDENT_ISIN_PATH = path.join(__dirname, 'identifiers_isin.json');
+const SAMPLE_PATH = path.join(__dirname, 'sample.csv');
+
+const YAHOO_SUFFIX = {
+  XNAS: '',
+  XNGS: '',
+  XNYS: '',
+  XASE: '',
+  XETR: '.DE',
+  XFRA: '.F',
+  XLON: '.L',
+  XTSE: '.TO',
+  XWBO: '.VI',
+  BVMF: '.SA',
+  XHKG: '.HK',
+  XTKS: '.T',
+};
 
 function loadIdentifiers() {
   try {
@@ -185,6 +202,90 @@ function loadIdentifiers() {
 
 function saveIdentifiers(data) {
   fs.writeFileSync(IDENT_PATH, JSON.stringify(data, null, 2));
+}
+
+function loadJsonFile(filePath, fallback = {}) {
+  try {
+    return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  } catch {
+    return fallback;
+  }
+}
+
+function splitCsvLine(line) {
+  const cols = [];
+  let cur = '';
+  let quoted = false;
+  for (let i = 0; i < line.length; i++) {
+    const ch = line[i];
+    if (ch === '"') {
+      if (quoted && line[i + 1] === '"') {
+        cur += '"';
+        i++;
+      } else {
+        quoted = !quoted;
+      }
+      continue;
+    }
+    if (ch === ',' && !quoted) {
+      cols.push(cur);
+      cur = '';
+      continue;
+    }
+    cur += ch;
+  }
+  cols.push(cur);
+  return cols;
+}
+
+function tickerRoot(ticker) {
+  return (ticker || '').trim().toUpperCase().split(/[._/]/)[0];
+}
+
+function resolveYahooTicker(ticker, mic) {
+  return `${tickerRoot(ticker)}${YAHOO_SUFFIX[(mic || '').trim().toUpperCase()] ?? ''}`;
+}
+
+function loadSampleIdentifierAliases() {
+  if (!fs.existsSync(SAMPLE_PATH)) return new Map();
+
+  const identifiers = loadIdentifiers();
+  const identifierIsins = loadJsonFile(IDENT_ISIN_PATH, {});
+  const exact = new Set(Object.keys(identifiers).map(t => t.toUpperCase()));
+  const roots = new Map();
+  for (const ticker of Object.keys(identifiers)) {
+    const root = tickerRoot(ticker);
+    if (!roots.has(root)) roots.set(root, ticker.toUpperCase());
+  }
+  const byIsin = new Map();
+  for (const [ticker, isin] of Object.entries(identifierIsins)) {
+    if (isin) byIsin.set(String(isin).trim().toUpperCase(), ticker.toUpperCase());
+  }
+
+  const lines = fs.readFileSync(SAMPLE_PATH, 'utf-8').trim().split(/\r?\n/);
+  const header = splitCsvLine(lines.shift() || '').map(h => h.trim().toUpperCase());
+  const idx = name => header.indexOf(name);
+  const tickerIdx = idx('TICKER');
+  const micIdx = idx('MIC');
+  const isinIdx = idx('ISIN');
+  if (tickerIdx < 0 || micIdx < 0 || isinIdx < 0) return new Map();
+
+  const aliases = new Map();
+  for (const line of lines) {
+    const cols = splitCsvLine(line);
+    const sampleTicker = (cols[tickerIdx] || '').trim().toUpperCase();
+    if (!sampleTicker) continue;
+    const mic = (cols[micIdx] || '').trim().toUpperCase();
+    const isin = (cols[isinIdx] || '').trim().toUpperCase();
+    const yahooTicker = resolveYahooTicker(sampleTicker, mic).toUpperCase();
+    const root = tickerRoot(sampleTicker);
+    const quoteTicker = exact.has(yahooTicker) ? yahooTicker
+      : roots.get(root)
+      || byIsin.get(isin)
+      || yahooTicker;
+    aliases.set(sampleTicker, quoteTicker);
+  }
+  return aliases;
 }
 
 const BASELINE_WORDS = [
@@ -207,6 +308,103 @@ let loadedModelId = null;
 let loadingPromise = null;
 const embedCache = {};
 
+// Full-vocab embedding index (loaded for MIC model)
+let vocabIndex = null;        // Float32Array [N, 384]
+let vocabIndexTokens = null;  // string[]
+let vocabIndexN = 0;
+
+// Raw ONNX embedding weight (for family commands — 4 vacuum dims)
+let embedWeight = null;        // Float32Array [vocab_size, 384]
+let embedWeightTokens = null;  // string[]
+let embedWeightN = 0;
+let embedWeightDim = 384;
+
+// Family 4-d vacuum vectors (loaded from family_vac.json)
+let familyVac = null;   // {token: [d18, d62, d28, d245]}
+let familyVacDims = [18, 62, 28, 245];
+
+async function loadVocabIndex(modelDir) {
+  const binPath = path.join(modelDir, 'vocab_embed.bin');
+  const tokPath = path.join(modelDir, 'vocab_embed_tokens.json');
+  if (!fs.existsSync(binPath) || !fs.existsSync(tokPath)) {
+    console.log('  (no vocab index — run scripts/build_embed_index.py)');
+    return;
+  }
+  const buf = fs.readFileSync(binPath);
+  const floatArr = new Float32Array(buf.buffer, buf.byteOffset, buf.byteLength / 4);
+  const dim = 384;
+  vocabIndex = floatArr;
+  vocabIndexN = floatArr.length / dim;
+  vocabIndexTokens = JSON.parse(fs.readFileSync(tokPath, 'utf-8'));
+  console.log(`  vocab index: ${vocabIndexN} embeddings`);
+
+  // Load raw embedding weight for family commands
+  const ewPath = path.join(modelDir, 'embed_weight.bin');
+  const ewTokPath = path.join(modelDir, 'embed_weight_tokens.json');
+  const fvPath = path.join(modelDir, 'family_vac.json');
+  if (fs.existsSync(ewPath) && fs.existsSync(fvPath)) {
+    const ewBuf = fs.readFileSync(ewPath);
+    embedWeight = new Float32Array(ewBuf.buffer, ewBuf.byteOffset, ewBuf.byteLength / 4);
+    embedWeightTokens = JSON.parse(fs.readFileSync(ewTokPath, 'utf-8'));
+    embedWeightN = embedWeight.length / 384;
+    familyVac = JSON.parse(fs.readFileSync(fvPath, 'utf-8'));
+    console.log(`  embed weight: ${embedWeightN}×384 (raw ONNX)`);
+    console.log(`  family tokens: ${Object.keys(familyVac).length}`);
+  }
+}
+
+/** Look up a token's 4-d vacuum vector from the raw embedding weight. */
+function getVacVector(token) {
+  // First check family_vac.json (pre-computed for family tokens)
+  if (familyVac) {
+    if (familyVac[token]) return familyVac[token];
+    if (familyVac[token.toLowerCase()]) return familyVac[token.toLowerCase()];
+    if (familyVac[token.toUpperCase()]) return familyVac[token.toUpperCase()];
+  }
+  // Fallback: look up in embedWeight
+  if (!embedWeight || !embedWeightTokens) return null;
+  let idx = embedWeightTokens.indexOf(token);
+  if (idx < 0) idx = embedWeightTokens.indexOf(token.toLowerCase());
+  if (idx < 0) idx = embedWeightTokens.indexOf(token.toUpperCase());
+  
+  if (idx < 0) return null;
+  const v = [];
+  for (const d of [18, 62, 28, 245]) {
+    v.push(embedWeight[idx * 384 + d]);
+  }
+  return v;
+}
+
+/** Cosine similarity between two 4-d vacuum vectors. */
+function vacCos(a, b) {
+  let dot = 0, na2 = 0, nb2 = 0;
+  for (let i = 0; i < 4; i++) {
+    dot += a[i] * b[i];
+    na2 += a[i] * a[i];
+    nb2 += b[i] * b[i];
+  }
+  const na = Math.sqrt(na2), nb = Math.sqrt(nb2);
+  if (na < 1e-8 || nb < 1e-8) return 0;
+  return dot / (na * nb);
+}
+
+/** Search full vocab index for nearest neighbors. Returns [{token, sim}]. */
+function searchIndex(queryEmb, topK = 20) {
+  if (!vocabIndex) return [];
+  const dim = 384;
+  const scores = [];
+  for (let i = 0; i < vocabIndexN; i++) {
+    let dot = 0;
+    const offset = i * dim;
+    for (let j = 0; j < dim; j++) {
+      dot += queryEmb[j] * vocabIndex[offset + j];
+    }
+    scores.push({ idx: i, sim: dot, token: vocabIndexTokens[i].toUpperCase() });
+  }
+  scores.sort((a, b) => b.sim - a.sim);
+  return scores.slice(0, topK);
+}
+
 async function loadModel(modelId) {
   if (loadedModelId === modelId && extractor) return;
   if (loadingPromise) return loadingPromise;
@@ -221,6 +419,10 @@ async function loadModel(modelId) {
     });
     loadedModelId = modelId;
     process.stdout.write('ready.\n');
+    // Load full-vocab index if available
+    if (modelId === MIC_MODEL) {
+      await loadVocabIndex(modelId);
+    }
   })();
   try {
     await loadingPromise;
@@ -305,6 +507,9 @@ async function main() {
   console.log('  sim <a> <b>                Cosine similarity between two words');
   console.log('  euc <a> <b>                Euclidean distance');
   console.log('  nn <word> [n]              N nearest neighbors from baseline words');
+  console.log('  family nn <word> [n]       N nearest neighbors among family tokens');
+  console.log('  family dist <a> <b>        Distance between two family tokens');
+  console.log('  family classify <word>     Closest marker type among {#MIC,ISIN,SEDOL,TICKER}');
   console.log('  stats <word>               Show distances to all baseline words');
   console.log('  show <word>                Explore embedding shape (dims, neighbors)');
   console.log('  diff <a> <b>               Show how two embeddings differ dimension-wise');
@@ -318,6 +523,7 @@ async function main() {
   console.log('  ids save <TICKER> <name>   Save a new identifier');
   console.log('  ids del <TICKER>           Delete an identifier');
   console.log('  quote <ticker>             Fetch current price from Yahoo');
+  console.log('  listings <ticker>          Show all exchange listings for a company');
   console.log('  chart <ticker> [range] [interval]  Text chart (range: 1d/5d/1mo/1y, interval: 1m/5m/1h/1d)');
   console.log('  news [topic]               Find recent financial news articles');
   console.log('  scan <url>                 Extract identifiers from an article');
@@ -379,18 +585,34 @@ async function main() {
           await processPage(text);
         };
         const processPage = async (text) => {
-          const tokPath = path.join(MIC_MODEL, 'tokenizer.json');
-          const tokData = JSON.parse(fs.readFileSync(tokPath, 'utf-8'));
-          const vocab = tokData.model?.vocab || {};
           const words = text.split(/\s+/).filter(w => w);
           const cleanWords = words.map(w => w.replace(/^[^A-Za-z0-9]+|[^A-Za-z0-9]+$/g, '')).filter(w => w);
-          const tickerSet = new Set([...new Set(cleanWords.filter(w => /^[A-Z]{1,5}$/.test(w) && vocab[w] !== undefined))]);
-          for (const w of words) { const m = w.match(/\^[A-Z]{1,5}/); if (m) tickerSet.add(m[0]); }
-          const tickers = [...tickerSet].sort();
-          console.log(`Found ${tickers.length} tickers: ${tickers.join(', ')}`);
+          const knownIdentifiers = new Set(Object.keys(loadIdentifiers()).map(t => t.toUpperCase()));
+          const quoteTargets = new Map();
+          for (const w of cleanWords) {
+            if (/^[A-Z]{2,5}$/.test(w) && knownIdentifiers.has(w.toUpperCase())) {
+              quoteTargets.set(w.toUpperCase(), w.toUpperCase());
+            }
+          }
+          for (const w of words) {
+            const m = w.match(/\^[A-Z]{1,5}/);
+            if (m) quoteTargets.set(m[0], m[0]);
+          }
+
+          const sampleAliases = loadSampleIdentifierAliases();
+          for (const [sampleTicker, quoteTicker] of sampleAliases.entries()) {
+            const escaped = sampleTicker.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            if (new RegExp(`\\b${escaped}\\b`).test(text)) {
+              quoteTargets.set(sampleTicker, quoteTicker);
+            }
+          }
+
+          const tickers = [...quoteTargets.keys()].sort();
+          const quoteTickers = [...new Set([...quoteTargets.values()])].sort();
+          console.log(`Found ${tickers.length} tickers: ${tickers.map(t => quoteTargets.get(t) === t ? t : `${t}->${quoteTargets.get(t)}`).join(', ')}`);
 
           console.log('Fetching quotes...');
-          const quoteResults = await Promise.all(tickers.map(async t => {
+          const quoteResults = await Promise.all(quoteTickers.map(async t => {
             try {
               const body = await httpGet(`https://query1.finance.yahoo.com/v8/finance/chart/${t}?range=1d&interval=1d`);
               const data = JSON.parse(body);
@@ -413,8 +635,10 @@ async function main() {
           let result = text;
           const sortedTickers = [...tickers].sort((a, b) => b.length - a.length);
           for (const t of sortedTickers) {
-            const q = tickerInfo[t];
-            const replacement = q ? `${q.color}${t}${RST} ${q.arrow}$${q.price.toFixed(2)} ${q.change >= 0 ? '+' : ''}${q.change.toFixed(2)} (${q.pct >= 0 ? '+' : ''}${q.pct.toFixed(2)}%)` : `${YLW}${t}${RST}`;
+            const quoteTicker = quoteTargets.get(t) || t;
+            const q = tickerInfo[quoteTicker];
+            const label = quoteTicker === t ? t : `${t}->${quoteTicker}`;
+            const replacement = q ? `${q.color}${label}${RST} ${q.arrow}$${q.price.toFixed(2)} ${q.change >= 0 ? '+' : ''}${q.change.toFixed(2)} (${q.pct >= 0 ? '+' : ''}${q.pct.toFixed(2)}%)` : `${YLW}${label}${RST}`;
             const escaped = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
             if (t.startsWith('^')) {
               result = result.replace(new RegExp(`(^|[^\\w])(${escaped})([^\\w]|$)`, 'g'), (_, b, __, a) => b + replacement + a);
@@ -447,7 +671,10 @@ async function main() {
           return;
         }
         if (!arg.startsWith('http')) {
-          const filePath = path.resolve(__dirname, arg);
+          let filePath = path.resolve(__dirname, arg);
+          if (!fs.existsSync(filePath) && path.basename(arg) === 'samples.csv') {
+            filePath = path.resolve(__dirname, 'sample.csv');
+          }
           if (fs.existsSync(filePath)) {
             const fileContent = fs.readFileSync(filePath, 'utf-8');
             (async () => { try { await processPage(fileContent); } catch (e) { console.log(`Error: ${e.message}`); } rl.prompt(); })();
@@ -545,8 +772,8 @@ async function main() {
       const bl = await buildBaseline(modelId);
 
       if (cmd === 'dist' && parts.length >= 3) {
-        const wordA = expand(parts[1]);
-        const wordB = expand(parts.slice(2).join(' '));
+        const wordA = expand(parts[1]).toLowerCase();
+        const wordB = expand(parts.slice(2).join(' ')).toLowerCase();
         if (useMIC) console.log(`(expanded: "${wordA}" / "${wordB}")`);
         const [embA, embB] = await Promise.all([getEmbedding(wordA), getEmbedding(wordB)]);
         const d = cosineDistance(embA, embB);
@@ -556,8 +783,8 @@ async function main() {
       }
 
       if (cmd === 'sim' && parts.length >= 3) {
-        const wordA = expand(parts[1]);
-        const wordB = expand(parts.slice(2).join(' '));
+        const wordA = expand(parts[1]).toLowerCase();
+        const wordB = expand(parts.slice(2).join(' ')).toLowerCase();
         if (useMIC) console.log(`(expanded: "${wordA}" / "${wordB}")`);
         const [embA, embB] = await Promise.all([getEmbedding(wordA), getEmbedding(wordB)]);
         const s = cosineSimilarity(embA, embB);
@@ -567,8 +794,8 @@ async function main() {
       }
 
       if (cmd === 'euc' && parts.length >= 3) {
-        const wordA = expand(parts[1]);
-        const wordB = expand(parts.slice(2).join(' '));
+        const wordA = expand(parts[1]).toLowerCase();
+        const wordB = expand(parts.slice(2).join(' ')).toLowerCase();
         if (useMIC) console.log(`(expanded: "${wordA}" / "${wordB}")`);
         const [embA, embB] = await Promise.all([getEmbedding(wordA), getEmbedding(wordB)]);
         const d = euclideanDistance(embA, embB);
@@ -649,19 +876,95 @@ async function main() {
         return;
       }
 
+      if (cmd === 'family') {
+        const sub = parts[1]?.toLowerCase();
+        if (sub === 'nn') {
+          const word = expand(parts[2]).toLowerCase();
+          const n = parts[3] ? parseInt(parts[3], 10) : 10;
+          if (!word) { console.log('Usage: family nn <word> [n]'); rl.prompt(); return; }
+          if (!familyVac) { console.log('No family index (family_vac.json) loaded.'); rl.prompt(); return; }
+          const queryVac = getVacVector(word);
+          if (!queryVac) { console.log(`"${word}" not in family tokens.`); rl.prompt(); return; }
+          const scores = [];
+          for (const [token, tokenVac] of Object.entries(familyVac)) {
+            if (token === word) continue;
+            const sim = vacCos(queryVac, tokenVac);
+            scores.push({ token, sim });
+          }
+          scores.sort((a, b) => b.sim - a.sim);
+          console.log(`Top ${n} family neighbors of "${word.toUpperCase()}" (4 vacuum dims):`);
+          for (let i = 0; i < Math.min(n, scores.length); i++) {
+            console.log(`  ${i + 1}. ${scores[i].token.toUpperCase()}  sim=${scores[i].sim.toFixed(4)}`);
+          }
+          rl.prompt();
+          return;
+        }
+        if (sub === 'dist') {
+          const a = expand(parts[2]).toLowerCase();
+          const b = expand(parts[3]).toLowerCase();
+          if (!a || !b) { console.log('Usage: family dist <tokenA> <tokenB>'); rl.prompt(); return; }
+          const va = getVacVector(a);
+          const vb = getVacVector(b);
+          if (!va) { console.log(`"${a}" not found.`); rl.prompt(); return; }
+          if (!vb) { console.log(`"${b}" not found.`); rl.prompt(); return; }
+          const sim = vacCos(va, vb);
+          const dist = 1 - sim;
+          console.log(`"${a}" ↔ "${b}" (4 vacuum dims):`);
+          console.log(`  cosine similarity: ${sim.toFixed(4)}`);
+          console.log(`  cosine distance:   ${dist.toFixed(4)}`);
+          console.log(`  ${a} vac: ${va.map(v => v.toFixed(4))}`);
+          console.log(`  ${b} vac: ${vb.map(v => v.toFixed(4))}`);
+          rl.prompt();
+          return;
+        }
+        if (sub === 'classify') {
+          const word = expand(parts[2]).toLowerCase();
+          if (!word) { console.log('Usage: family classify <word>'); rl.prompt(); return; }
+          const va = getVacVector(word);
+          if (!va) { console.log(`"${word}" not in family index.`); rl.prompt(); return; }
+          const markers = ['#MIC', 'ISIN', 'SEDOL', 'TICKER'];
+          const scores = [];
+          for (const m of markers) {
+            const vm = getVacVector(m);
+            if (!vm) continue;
+            scores.push({ marker: m, sim: vacCos(va, vm) });
+          }
+          scores.sort((a, b) => b.sim - a.sim);
+          console.log(`"${word}" family classification (4 vacuum dims):`);
+          scores.forEach(s => console.log(`  ${s.marker}  sim=${s.sim.toFixed(4)}`));
+          console.log(`→ ${scores[0].marker}`);
+          rl.prompt();
+          return;
+        }
+        console.log('Usage: family nn|dist|classify ...');
+        rl.prompt();
+        return;
+      }
+
       if (cmd === 'nn') {
-        const word = expand(parts[1]);
-        const n = parts[2] ? parseInt(parts[2], 10) : 5;
+        const word = expand(parts[1]).toLowerCase();
+        const n = parts[2] ? parseInt(parts[2], 10) : 10;
         if (!word) { console.log('Usage: nn <word> [n]'); rl.prompt(); return; }
         if (useMIC) console.log(`(expanded: "${word}")`);
         const emb = await getEmbedding(word);
-        const blEmbs = await Promise.all(BASELINE_WORDS.map(w => getEmbedding(w)));
-        const sims = BASELINE_WORDS.map((w, i) => ({ word: w, sim: cosineSimilarity(emb, blEmbs[i]) }));
-        sims.sort((a, b) => b.sim - a.sim);
-        console.log(`Top ${n} nearest neighbors of "${word}":`);
-        for (let i = 0; i < Math.min(n, sims.length); i++) {
-          const d = 1 - sims[i].sim;
-          console.log(`  ${i + 1}. ${sims[i].word}  sim=${sims[i].sim.toFixed(4)}  dist=${fmtDist(d, bl.mean, bl.std)}`);
+
+        if (vocabIndex) {
+          // Full-vocab search through pre-computed transformer embeddings
+          const results = searchIndex(emb, n);
+          console.log(`Top ${n} nearest neighbors of "${word}" (vocab index, ${vocabIndexN} tokens):`);
+          for (let i = 0; i < results.length; i++) {
+            console.log(`  ${i + 1}. ${results[i].token}  sim=${results[i].sim.toFixed(4)}`);
+          }
+        } else {
+          // Fallback: baseline 88 words
+          const blEmbs = await Promise.all(BASELINE_WORDS.map(w => getEmbedding(w)));
+          const sims = BASELINE_WORDS.map((w, i) => ({ word: w, sim: cosineSimilarity(emb, blEmbs[i]) }));
+          sims.sort((a, b) => b.sim - a.sim);
+          console.log(`Top ${n} nearest neighbors of "${word.toUpperCase()}" (baseline, ${BASELINE_WORDS.length} words):`);
+          for (let i = 0; i < Math.min(n, sims.length); i++) {
+            const d = 1 - sims[i].sim;
+            console.log(`  ${i + 1}. ${sims[i].word.toUpperCase()}  sim=${sims[i].sim.toFixed(4)}  dist=${fmtDist(d, bl.mean, bl.std)}`);
+          }
         }
         rl.prompt();
         return;
@@ -765,6 +1068,39 @@ async function main() {
           if (info?.exchange) console.log(`  MIC: ${info.exchange}`);
         } catch (e) {
           console.log(`Error fetching ${ticker}: ${e.message}`);
+        }
+        rl.prompt();
+        return;
+      }
+
+      if (cmd === 'listings') {
+        const query = (expand(parts[1]) || '').toUpperCase();
+        if (!query) { console.log('Usage: listings <ticker>'); rl.prompt(); return; }
+        try {
+          const body = await httpGet(`https://query1.finance.yahoo.com/v1/finance/search?q=${encodeURIComponent(query)}`);
+          const data = JSON.parse(body);
+          const quotes = data.quotes || [];
+          const db = loadIdentifiers();
+          const exact = [];
+          const related = [];
+          for (const q of quotes) {
+            const entry = { sym: q.symbol, name: q.shortname || q.longname || '', exch: q.exchange || '?', type: q.quoteType || '?', mic: q.isYahooFinance ? '' : '' };
+            const isSame = q.symbol?.toUpperCase() === query
+              || q.shortname?.toUpperCase().includes(query)
+              || (db[q.symbol] && db[q.symbol].longname?.toUpperCase().includes(query));
+            (isSame ? exact : related).push(entry);
+          }
+          if (exact.length) {
+            console.log(`\nDirect matches for "${query}":`);
+            for (const e of exact) console.log(`  ${e.sym.padEnd(14)} ${e.exch.padEnd(6)} ${e.type.padEnd(8)} ${e.name}`);
+          }
+          if (related.length) {
+            console.log(`\nRelated (same name / cross-listings):`);
+            for (const e of related.slice(0, 10)) console.log(`  ${e.sym.padEnd(14)} ${e.exch.padEnd(6)} ${e.type.padEnd(8)} ${e.name}`);
+          }
+          if (!exact.length && !related.length) console.log('No results.');
+        } catch (e) {
+          console.log(`Error: ${e.message}`);
         }
         rl.prompt();
         return;
